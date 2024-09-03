@@ -20,9 +20,8 @@ export default function RootLayout({
     <html lang="en">
       
       <body>
-      <div className={"wrapper"}>
-      <Link href="/" className="header">Home</Link>
-      <Link href="/" className="Footer">Abel</Link>
+      <div className={"wrapper"} id="background">
+     
       <main>
       {children}
       </main>

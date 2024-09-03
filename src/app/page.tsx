@@ -104,25 +104,25 @@ export default function Home() {
         </div>    
         </InView>
     <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 border-2  justify-center" >
-    <ProjectCard project_svg_name="KdTreesCard.png" alt_text=""/>
+      <ProjectCard project_svg_name="KdTreesCard.png" alt_text=""/>
+      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text=""/>
       <ProjectCard project_svg_name="BicycleGan.png" alt_text=""/>
-      <ProjectCard project_svg_name="Lyric_Gen_Ai.png" alt_text=""/>
-      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text={csgo_card_alt_text}/>
+      <ProjectCard project_svg_name="LyricGenAi.png" alt_text=""/>
       <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text=""/>
       <ProjectCard project_svg_name="RamCard.png" alt_text=""/> 
-      <ProjectCard project_svg_name="SnakeAICard.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="AdderCard.png" alt_text=""/>
       <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGO_CARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text}/>
+      <ProjectCard project_svg_name="SnakeAICard.png" alt_text=""/>
+      <ProjectCard project_svg_name="AdderCard.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
     </div>  
     <Link href="/" className="Footer">Abel</Link>
   </span> 
