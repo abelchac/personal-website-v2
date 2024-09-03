@@ -16,13 +16,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
+      
       <body>
+      <div className={"wrapper"}>
+      <Link href="/" className="header">Home</Link>
+      <Link href="/" className="Footer">Abel</Link>
       <main>
-      <Link href="/">Home</Link>
-      <Link href="/">Abel</Link>
       {children}
       </main>
+      
+      </div>
       </body>
     </html>
   );
