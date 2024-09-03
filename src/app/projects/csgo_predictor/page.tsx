@@ -1031,6 +1031,7 @@ export function Section6(){
       <img src="csgo_predictor/TotalRoundsVs.png"></img>
 
     </div>
+    <br></br>
     
     <Code_block5></Code_block5>
     

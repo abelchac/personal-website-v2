@@ -63,7 +63,7 @@ export default function Home() {
     
   return (
     
-  <span>
+  <section>
      
      <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
       <div ref={ref}>
@@ -105,12 +105,13 @@ export default function Home() {
         Vestibulum fermentum id dui ac interdum. Vivamus vel hendrerit sapien, nec maximus lorem. Nam pellentesque ullamcorper nunc. Aliquam aliquam tortor sed justo fermentum, a dignissim leo sollicitudin. Phasellus in nunc ultrices mi aliquet consectetur ac vitae mauris. Donec eu sollicitudin dui, et aliquam felis. Morbi semper at massa vel vestibulum. Nam sagittis pellentesque nunc ut dapibus. Nulla cursus, orci at mattis posuere, sem leo scelerisque mi, quis scelerisque mi diam eu eros.
         </div>    
         </InView>
-    <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 border-2  justify-center" >
+    <section>
+    <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 justify-center" >
       <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>
       <ProjectCard project_svg_name="RamCard.png" alt_text="" href=""/> 
       <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>
@@ -126,8 +127,8 @@ export default function Home() {
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
     </div>  
-   
-  </span> 
+    </section>   
+  </section> 
     
   );
 }
