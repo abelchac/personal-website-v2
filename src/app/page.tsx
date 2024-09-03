@@ -6,7 +6,7 @@ import React, { useRef, useCallback, use, useEffect } from "react";
 import { useInView, InView} from "react-intersection-observer";
 
 
-function ProjectCard(props : {project_svg_name : string, alt_text : string}){
+function ProjectCard(props : {project_svg_name : string, alt_text : string, href : string}){
   let data_string = './cards/' + props.project_svg_name;
   
   const { ref, inView, entry } = useInView(
@@ -22,12 +22,14 @@ function ProjectCard(props : {project_svg_name : string, alt_text : string}){
   } else{
     entry?.target.classList.remove('show');
   }
-  console.log(inView);
+  //console.log(inView);
   
-
+  let href = "/projects/" + props.href;
   return (
     <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
-      <img ref={ref} className={`place-items-center ProjectCard`} src={data_string} alt={props.alt_text}/>
+      <a href={href}>
+      <img ref={ref} className={`place-items-center ProjectCard`} src={data_string} alt={props.alt_text} />
+      </a>
     </InView>
   );
 }
@@ -62,7 +64,7 @@ export default function Home() {
   return (
     
   <span>
-     <Link href="/" className="header">Home</Link>
+     
      <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
       <div ref={ref}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tristique pretium. Aliquam malesuada laoreet sapien, eu feugiat ligula gravida in. Maecenas porta eu odio eget congue. Nulla turpis nisi, faucibus at vehicula et, sodales sit amet risus. Integer quis turpis porta, pellentesque neque id, tincidunt tellus. Etiam ligula erat, molestie ut laoreet id, hendrerit rhoncus justo. Aliquam dui felis, tristique at augue ac, vestibulum molestie nisi. Sed fermentum, erat quis molestie volutpat, ex sem ultricies magna, vel consequat enim lectus sed massa. Mauris eget justo feugiat dui volutpat vehicula a sit amet purus. Nullam tincidunt condimentum ligula, eget hendrerit nunc. Fusce sed lectus suscipit, dapibus velit convallis, rhoncus enim. Pellentesque vel metus id mi molestie laoreet. Sed sit amet ligula orci. Curabitur scelerisque ex nec felis lobortis hendrerit. Praesent vitae tincidunt metus. Pellentesque eu magna lacinia, cursus orci sed, convallis quam.
@@ -104,27 +106,27 @@ export default function Home() {
         </div>    
         </InView>
     <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 border-2  justify-center" >
-      <ProjectCard project_svg_name="KdTreesCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="BicycleGan.png" alt_text=""/>
-      <ProjectCard project_svg_name="LyricGenAi.png" alt_text=""/>
-      <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="RamCard.png" alt_text=""/> 
-      <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text}/>
-      <ProjectCard project_svg_name="SnakeAICard.png" alt_text=""/>
-      <ProjectCard project_svg_name="AdderCard.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text=""/>
+      <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="RamCard.png" alt_text="" href=""/> 
+      <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>
+      <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
     </div>  
-    <Link href="/" className="Footer">Abel</Link>
+   
   </span> 
     
   );
