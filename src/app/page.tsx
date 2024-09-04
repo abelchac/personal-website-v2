@@ -115,7 +115,7 @@ export default function Home() {
       <ProjectCard project_svg_name="RamCard.png" alt_text="" href=""/> 
       <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>
-      <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="" />
+      <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />
       <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="" />
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
