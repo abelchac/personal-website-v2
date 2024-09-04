@@ -5,6 +5,18 @@ import Link from "next/link";
 import React, { useRef, useCallback, use, useEffect } from "react";
 import { useInView, InView} from "react-intersection-observer";
 
+function fadeInFactory(element : React.JSX.Element){
+  const { ref, inView, entry } = useInView(
+    {
+      /* Optional config */
+      threshold: 0.1,  // Trigger when 10% of the element is in view
+      triggerOnce: true,  // Trigger only once
+    }
+  );
+  let viewerElement = <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}><div ref={ref}>{element}</div></InView>
+  
+  return viewerElement
+}
 
 function ProjectCard(props : {project_svg_name : string, alt_text : string, href : string}){
   let data_string = './cards/' + props.project_svg_name;
@@ -46,6 +58,9 @@ export default function Home() {
   
   
   `
+
+
+  
     const { ref, inView, entry } = useInView(
       {
         /* Optional config */
@@ -61,6 +76,7 @@ export default function Home() {
     }
     console.log(inView);
     
+    let project_title = fadeInFactory(<div><h1 className="center ProjectTitle">Projects</h1></div>);
   return (
     
   <section>
@@ -106,26 +122,19 @@ export default function Home() {
         </div>    
         </InView>
     <section>
+    <br></br>
+    {project_title}
     <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 justify-center" >
-      <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>
+      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>
+      <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>
+      <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href="lyric_gen"/>
       <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>
-      <ProjectCard project_svg_name="RamCard.png" alt_text="" href=""/> 
-      <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="RamCard.png" alt_text="" href="ram_design"/> 
+      <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>
       <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>
       <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />
-      <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="" />
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href="" />
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text="" href=""/>
+      <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="adder" />
     </div>  
     </section>   
   </section> 
