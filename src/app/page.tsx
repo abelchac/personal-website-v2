@@ -74,7 +74,6 @@ export default function Home() {
     } else{
       entry?.target.classList.remove('shown');
     }
-    console.log(inView);
     
     let project_title = fadeInFactory(<div><h1 className="center ProjectTitle">Projects</h1></div>);
   return (

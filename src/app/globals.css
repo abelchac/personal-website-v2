@@ -49,7 +49,7 @@ body {
 
 .hid {
   filter: blur(5px);
-  transform: translateX(-100%);
+  transform: translateX(-50%);
   transition: all 1s;
 }
 
@@ -125,13 +125,15 @@ p{
 
 
 section {
-  padding-right: 10em;
-  padding-left: 10em;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 
 video {
   z-index: -1;
+  max-height: 30em;
+  align-self: center;
 }
 
 
