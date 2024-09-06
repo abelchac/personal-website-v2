@@ -142,3 +142,9 @@ video {
 .ProjectTitle{
   text-align:center;
 }
+
+li {
+  font-size: 150%;
+  margin-left: 10px;
+  list-style-type: circle;
+}
