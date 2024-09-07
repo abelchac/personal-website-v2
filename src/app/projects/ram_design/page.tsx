@@ -39,7 +39,7 @@ export default function RAM_Project() {
   based on your design’s delay (ie. write access time and read access time). Your max
   frequency must be greater than 500 MHz (ie. your memory must be able to operate
   with at least a 500 MHz clock).</li>
-
+  <section><img src="ram_design/ramlayout.png"></img></section>
   <li> We will concretely focus on an SRAM memory array with capacity of 16, holding
   4b-wide data elements.</li>
   <li> Inputs: 4-bit address, active high write enable (WE=1 for write, WE=0 for read),
@@ -51,9 +51,189 @@ export default function RAM_Project() {
 
   </div>)
 
+  let design = fadeInFactory(<div>
+    <h2>1. Design:</h2>
+      <section><h3>1.1 Decoder:</h3>
+    <p>
+    The decoder takes 4 inputs and will output a high on the corresponding wordline
+based. The outputs have tristate buffers on them to assure the wordlines will only
+output when desired. The enable on the phi_bar allows for the world line to rise
+after the new input values are processed.
+    </p>
+    <figure>
+      <img src="ram_design/decoder.png"></img>
+      <figcaption>Figure 1.1: Design of the decoder to be used in the selection of the rows</figcaption>
+    </figure>
+    
+    </section>
+
+  </div>)
+
+  let tristate_buffer = fadeInFactory(<div><section>
+    <h3>1.2 Tri-state Buffer/Inverter:
+    </h3>
+    <p>The tri-state buffer and inverter are necessary for controlling the wires within the
+    memory in order to create areas of high impedance to isolate the inputs that are desired</p>
+    <figure>
+     <img src="ram_design/tristate_buffer_1.png"></img> 
+     <figcaption>Figure 1.2: Tri-state buffer design to be used in the column driver
+     </figcaption>
+    </figure>
+    <figure>
+     <img src="ram_design/tristate_buffer_2.png"></img> 
+     <figcaption>Figure 1.3: Tri-state inverter design to be used in the column driver
+     </figcaption>
+    </figure>
+    </section></div>)
+
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      <figure>
+        <img src="ram_design/6t_sram.png" alt="" />
+        <figcaption>Figure 1.4: Memory cell design for a single bit using 6T SRAM cell design</figcaption>
+      </figure>
+
+      <p>The only transistors that are sized to values other than the minimum are those
+concerning the CR and PR, thus the 2 to 1 ratio that is seen on the left hand side iand the
+1 to 1 on the right. The values were produced after starting off with the ratios from those
+that were present for the technology from the textbook where the ratios should be greater
+than 1.2 and less than 1.8, for each side, respectively. Using those as a starting point the
+values were tweaked once the single cell was tested with the full bitline capacitance, but
+the capacitances from the milestone were too high such that the WL was not able to
+charge the capacitors, these values were selected to preserve a similar ratio while assuring
+that the WL was able to charge the inputs fast enough</p>
+      </section></div>)
+
+
+      
+    let memory_col = fadeInFactory(<div><section>
+      <h3>1.4 Memory Column 16 words (1bit):
+      </h3>
+      <p>The memory column was made as both a testing block and for the sake of clarity.
+Taking a single column and placing 4 of cells next to each other will produce the 16
+words of length 4 bits.</p>
+      <figure>
+        <img src="ram_design/mem_col.png" alt="" />
+        <figcaption>Figure 1.4: The design of a single column of the memory
+        that will be used to make the 4 bit long words</figcaption>
+      </figure>
+      </section></div>)
+
+      
+    let io_bus = fadeInFactory(<div><section>
+      <h3>1.5 4-bit IO Bus:
+      </h3>
+      <p>This 4-bit IO bus is used to interface with the ram driving the inputs and receiving
+the outputs. Each input has a gate-based latch in them to increase the robustness of the
+design to assure that even if the inputs change while the WE is on the stored output will
+be the one that is coinciding with the rising edge of the clock.
+</p>
+      <figure>
+        <img src="ram_design/io_bus.png" alt="" />
+        <figcaption>Figure 1.5: The design for the 4-bit IO bus.</figcaption>
+      </figure>
+      </section></div>)
+
+          
+    let full_memory = fadeInFactory(<div><section>
+      <h3>1.6 Full Memory (16 words of 4 bits):
+      </h3>
+      <p>The design of the full memory with IO is layed out into 16 rows and 4 columns to
+produce the required 16 words of 4 bits. The decoder takes in a 4 bit input and outputs
+high the specific wordline on phi_bar. The bitline is conditioned in the same manner as
+the single bit, though there are 4 times as many tri-state buffers to supply all the bitlines,
+with a NOR phi_bar and WE to only condition the line for a limited amount of time so as
+to not interfere with the desired values be it input or output values. The 4-bit IO bus is
+placed at the bottom handling both the input and output values. The values are input and
+read on the D0-3 lines.
+</p>
+      <figure>
+        <img src="ram_design/full_ram.png" alt="" />
+        <figcaption>Figure 1.6: The design for the full 16 words of 4 bits memory with peripherals
+        </figcaption>
+      </figure>
+      </section></div>)
+
+            
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      
+      </section></div>)
+
+            
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      <figure>
+        <img src="ram_design/" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+      </section></div>)
+
+            
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      <figure>
+        <img src="ram_design/" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      </section></div>)
+
+            
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      
+      </section></div>)
+
+            
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      <figure>
+        <img src="ram_design/" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      </section></div>)
+
+
+      
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      <figure>
+        <img src="ram_design/" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+      </section></div>)
+
+
+          
+    let memory_cell = fadeInFactory(<div><section>
+      <h3>1.3 Memory Cell:
+      </h3>
+      
+      <figure>
+        <img src="ram_design/" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      </section></div>)
+
   return (
       <section className="">
       {design_problem}
+      {design}
+      {tristate_buffer}
       </section>     
      
     );
