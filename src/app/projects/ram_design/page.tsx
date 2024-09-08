@@ -157,15 +157,33 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cell = fadeInFactory(<div><section>
-      <h3>1.3 Memory Cell:
+    let validation = fadeInFactory(<div><section>
+      <h2>2. Validation:
+      </h2>
+      <h3>2.1 Decoder:
       </h3>
-      
+
+      <figure>
+        <img src="ram_design/val_decoder.png" alt="" />
+        <figcaption>Figure 2.1: Test setup for decoder using 4 pulse generator to cover all 16 cases</figcaption>
+      </figure>
+      <figure>
+        <img src="ram_design/val_power.png" alt="" />
+        <figcaption>Figure 2.2: Close-up of tht pulse generators each one has double the period of the next
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="ram_design/val_decoder_out.png" alt="" />
+        <figcaption>Figure 2.2: Plot of the word outputs rising in their designated order
+        </figcaption>
+      </figure>
+      <p>The inputs were test ascending order 0-15 as each wave worldline rises in that it is
+      possible to confirm the validity of the decoder</p>
       
       </section></div>)
 
             
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cel = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       <figure>
@@ -176,7 +194,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell_2 = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       
@@ -187,7 +205,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell3 = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       
@@ -195,7 +213,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell4 = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       
@@ -207,7 +225,7 @@ read on the D0-3 lines.
 
 
       
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell5 = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       <figure>
@@ -219,7 +237,7 @@ read on the D0-3 lines.
 
 
           
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell6 = fadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       
@@ -234,6 +252,11 @@ read on the D0-3 lines.
       {design_problem}
       {design}
       {tristate_buffer}
+      {memory_cell}
+      {memory_col}
+      {io_bus}
+      {full_memory}
+      {validation}
       </section>     
      
     );
