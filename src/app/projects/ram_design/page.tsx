@@ -183,13 +183,25 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cel = fadeInFactory(<div><section>
-      <h3>1.3 Memory Cell:
+    let validation_tri_state = fadeInFactory(<div><section>
+      <h3>2.2 Tri-state Buffer/Inverter:
       </h3>
       <figure>
-        <img src="ram_design/" alt="" />
-        <figcaption></figcaption>
+        
+        <figcaption>Figure 2.3: All possible inputs of input and enable for tristate
+        </figcaption>
       </figure>
+      <figure>
+        <img src="ram_design/tristate_val.png" alt="" />
+        <figcaption>Figure 2.4: Test setup for the tri-state buffer
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="ram_design/tristate_inverter_val.png" alt="" />
+        <figcaption>Figure 2.5: Test setup for the tri-state inverter
+        </figcaption>
+      </figure>
+      
       
       </section></div>)
 
