@@ -187,7 +187,37 @@ read on the D0-3 lines.
       <h3>2.2 Tri-state Buffer/Inverter:
       </h3>
       <figure>
-        
+      <table className="dataframe w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <th>EN</th>
+            <th>In</th>
+            <th>Out</th>
+          </tr>
+            </thead>
+              <tbody>
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th>0</th>
+                  <td>0</td>
+                  <td>*</td>
+                </tr>
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th>0</th>
+                  <td>1</td>
+                  <td>*</td>
+                </tr>
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th>1</th>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th>1</th>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+        </tbody>
+        </table>
         <figcaption>Figure 2.3: All possible inputs of input and enable for tristate
         </figcaption>
       </figure>
@@ -201,7 +231,18 @@ read on the D0-3 lines.
         <figcaption>Figure 2.5: Test setup for the tri-state inverter
         </figcaption>
       </figure>
-      
+      <figure>
+        <img src="ram_design/figure_2_6.png" alt="" />
+        <figcaption>Figure 2.6: Plot showing the outputs from the tri-state buffer. When enable is on the output is reflected by the input
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="ram_design/figure_2_7.png" alt="" />
+        <figcaption>Figure 2.7: Plot showing the outputs from the tri-state inverter When enable is on the output is reflected by the inverted input
+
+        </figcaption>
+      </figure>
       
       </section></div>)
 
@@ -269,6 +310,8 @@ read on the D0-3 lines.
       {io_bus}
       {full_memory}
       {validation}
+      <br></br>
+      {validation_tri_state}
       </section>     
      
     );
