@@ -26,12 +26,29 @@ function fadeInFactory(element : React.JSX.Element){
 
 export default function AdderProject() {
 
+  let design_problem = (<div>
+    <h1>RAM Design</h1>
+    <h2>Design Problem: Design the circuit-level implementation of a full-adder bit-slice (for a
+      ripple-carry adder).</h2>
+    <section>
+  
+    <ul>
+      <li>Your design must be cascadable to build adders of arbitrary bit width and usable in
+      adder trees (e.g. as used in multipliers).</li>
+  <li>Target technology is the High Performance 22nm process</li>
+  <li> Vdd ≤ 1V</li>
+      </ul>
+    </section>
+
+  </div>)
 
   return (
-      <section className="">
-      
-      </section>     
-     
+    <div>
+    {design_problem}
+       <object className="pdf" 
+            data="adder/adder.pdf">
+    </object>
+    </div>
     );
 }
 
