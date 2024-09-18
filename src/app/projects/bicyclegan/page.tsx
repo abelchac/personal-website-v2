@@ -475,7 +475,7 @@ export default function BicycleGANProject() {
     </div>);
 
   
-  let video = fadeInFactory(<video controls src="bicyclegan/CIS680 Final.mp4"></video>);
+  let video = fadeInFactory(<video controls src="bicyclegan/BicycleGan.mov"></video>);
 
   let abstract = fadeInFactory(<div>
     <h2>Abstract</h2>
