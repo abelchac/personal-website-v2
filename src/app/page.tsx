@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import React, { useRef, useCallback, use, useEffect } from "react";
 import { useInView, InView} from "react-intersection-observer";
+import { ProjectCard } from "@/components/Card";
 
 function fadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
@@ -18,38 +19,14 @@ function fadeInFactory(element : React.JSX.Element){
   return viewerElement
 }
 
-function ProjectCard(props : {project_svg_name : string, alt_text : string, href : string}){
-  let data_string = './cards/' + props.project_svg_name;
-  
-  const { ref, inView, entry } = useInView(
-    {
-      /* Optional config */
-      threshold: 0.05,  // Trigger when 10% of the element is in view
-      triggerOnce: true,  // Trigger only once
-    }
-  );
 
-  if (inView) {
-    entry?.target.classList.add('show');
-  } else{
-    entry?.target.classList.remove('show');
-  }
-  //console.log(inView);
-  
-  let href = "/projects/" + props.href;
-  return (
-    <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
-      <a href={href}>
-      <img ref={ref} className={`place-items-center ProjectCard`} src={data_string} alt={props.alt_text} />
-      </a>
-    </InView>
-  );
-}
 
 
 export default function Home() {
 
   //let card_csgo = create_card("CSGO_CARD.svg");
+
+ 
   let csgo_card_alt_text = `Cards that looks like a trading card that has the title: 'CSGO WIN Predictor', 
     attributes: Big Data, Machine Learning, Data Visualization. 
     Description: Using feed forward neural networks and CSGO player statistics, a game result was predicted `;
@@ -59,6 +36,17 @@ export default function Home() {
   
   `
 
+
+  let cards = [ <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>,
+    <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>,
+    <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>,
+    <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href="lyric_gen"/>,
+    <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>,
+    <ProjectCard project_svg_name="RamCard.png" alt_text="" href="ram_design"/> ,
+    <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>,
+    <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
+    <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />,
+    <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="adder" />]
 
   
     const { ref, inView, entry } = useInView(
@@ -124,16 +112,17 @@ export default function Home() {
     <br></br>
     {project_title}
     <div className="projectCardGrid grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 justify-center" >
-      <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>
-      <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>
-      <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>
-      <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href="lyric_gen"/>
-      <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>
-      <ProjectCard project_svg_name="RamCard.png" alt_text="" href="ram_design"/> 
-      <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>
-      <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>
-      <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />
-      <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="adder" />
+    {cards[0]}
+    {cards[1]}
+    {cards[2]}
+    {cards[3]}
+    {cards[4]}
+    {cards[5]}
+    {cards[6]}
+    {cards[7]}
+    {cards[8]}
+    {cards[9]}
+
     </div>  
     </section>   
   </section> 
