@@ -436,7 +436,7 @@ sorted_result_df
   return (     
     <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
     <div ref={ref}> <h1>CSGO Win Predictor</h1>
-    <img  fill  src="csgo_predictor/csgo_header.png" alt={""}></img >
+    <img   src="csgo_predictor/csgo_header.png" alt={""}></img >
     <p>First and foremost this project ties together our interest in the highly popular Counter-Strike: Global Offensive with data analysis. Though the game is still evolving both at the professional and casual levels, there are not many accessible endeavors to understand the impacts of certain game specific statistics on the overall outcome of each individual match. We want to explore what statistics affect the probability of a game resulting in a win, draw, or loss for that player. Through pulling statstics from csgostats.gg we will develop a model to attempt to accurately predict the outcome of a match given an individuals player statistics.</p>
     
     </div>
@@ -1022,13 +1022,13 @@ sorted_result_df
     <br></br>
 
     <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10  justify-center">
-      <img  fill  src="csgo_predictor/CorrelationOfFeatuersToWinResult.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/KillsPerRoundVs.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/AssitsPerRoundVs.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/DeathsPerRoundVs.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/DamagePerRoundVs.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/HsPerRoundVs.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/TotalRoundsVs.png" alt={""}></img >
+      <img   src="csgo_predictor/CorrelationOfFeatuersToWinResult.png" alt={""}></img >
+      <img   src="csgo_predictor/KillsPerRoundVs.png" alt={""}></img >
+      <img   src="csgo_predictor/AssitsPerRoundVs.png" alt={""}></img >
+      <img   src="csgo_predictor/DeathsPerRoundVs.png" alt={""}></img >
+      <img   src="csgo_predictor/DamagePerRoundVs.png" alt={""}></img >
+      <img   src="csgo_predictor/HsPerRoundVs.png" alt={""}></img >
+      <img   src="csgo_predictor/TotalRoundsVs.png" alt={""}></img >
 
     </div>
     <br></br>
@@ -1097,7 +1097,7 @@ sorted_result_df
     <br></br>
     <Code_block12></Code_block12>
 
-    <img  fill  src="csgo_predictor/ModelAccuracy.png" alt={""}></img >
+    <img   src="csgo_predictor/ModelAccuracy.png" alt={""}></img >
 
     </div>
     </InView>);
@@ -1120,8 +1120,8 @@ sorted_result_df
     <br></br>
     <Code_block14></Code_block14>
     <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10  justify-center">
-      <img  fill  src="csgo_predictor/AccuracryPerDataset.png" alt={""}></img >
-      <img  fill  src="csgo_predictor/PercentOfTotalDataset.png" alt={""}></img >   
+      <img   src="csgo_predictor/AccuracryPerDataset.png" alt={""}></img >
+      <img   src="csgo_predictor/PercentOfTotalDataset.png" alt={""}></img >   
     </div>
       
     <p>Here we sort our predictions to find the games that our model predicted with the highest probability of being a win. Since our data was normalized, we perform those operations in reverse for this to be more readable.</p>
@@ -1368,11 +1368,11 @@ sorted_result_df
   return (   <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
 
   <div ref={ref}><h2>Model with Hidden Layers of Size 32, 32, 32, 32, 16, 16, 8</h2>
-    <img  fill  src="csgo_predictor/Model1.png" alt={""}></img >   
+    <img   src="csgo_predictor/Model1.png" alt={""}></img >   
     <h2>Model with Hidden Layers of Size 15, 8</h2>
-    <img  fill  src="csgo_predictor/Model2.png" alt={""}></img >   
+    <img   src="csgo_predictor/Model2.png" alt={""}></img >   
     <h2>Model with No Hidden Layers (Linear Regression)</h2>
-    <img  fill  src="csgo_predictor/Model3.png" alt={""}></img >   
+    <img   src="csgo_predictor/Model3.png" alt={""}></img >   
     </div></InView>);
 
 }
