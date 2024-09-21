@@ -12,7 +12,7 @@ export function ProjectCard(props : {project_svg_name : string, alt_text : strin
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
-      threshold: 0.7,  // Trigger when 10% of the element is in view
+      threshold: 0.5,  // Trigger when 10% of the element is in view
       triggerOnce: true,  // Trigger only once
     }
   );

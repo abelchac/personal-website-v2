@@ -45,8 +45,7 @@ export default function AdderProject() {
   return (
     <div>
     {design_problem}
-       <object className="pdf" 
-            data="adder/adder.pdf">
+       <object className="pdf"  type="application/pdf" data="adder/adder.pdf">
     </object>
     </div>
     );
