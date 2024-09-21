@@ -69,7 +69,7 @@ the snake to run into itself. The episode for the snake game will either end in 
 an illegal cell. If the agent runs into a food cell the size of the snake will increase by one, and another piece of food will
 be placed into a random empty cell</p>
     <figure>
-      <img src="simple_dqn/snake.png"></img>
+      <Image src="simple_dqn/snake.png" alt={""}></Image>
       <figcaption>FIGURE 1. A possible initial state of the environment. Green is the snake, yellow is the food, and
       purple are the empty cells</figcaption>
     </figure>
@@ -163,28 +163,28 @@ its death in 3 steps. The average food eaten is negligible and most likely only 
   <div className="grid grid-cols-[repeat(auto-fill,minmax(6rem,25rem))] gap-x-16 gap-y-10 justify-center">
 
   <figure>
-  <img src="simple_dqn/results.png"></img>
+  <Image src="simple_dqn/results.png" alt={""}></Image>
   <figcaption>FIGURE 2. A rolling average of number of moves in each iterations versus the total number of
 iterations in training
 </figcaption>
   </figure>
   
   <figure>
-  <img src="simple_dqn/foodVsIteration.png"></img>
+  <Image src="simple_dqn/foodVsIteration.png" alt={""}></Image>
   <figcaption>FIGURE 3. A rolling average of number of food eaten in each iterations versus the total number of
   iterations in training
 </figcaption>
   </figure>
 
   <figure>
-  <img src="simple_dqn/eval.png"></img>
+  <Image src="simple_dqn/eval.png" alt={""}></Image>
   <figcaption>FIGURE 4. A rolling average of number of moves in each iterations versus the total number of
   iterations in evaluation
 </figcaption>
   </figure>
 
   <figure>
-  <img src="simple_dqn/eval2.png"></img>
+  <Image src="simple_dqn/eval2.png" alt={""}></Image>
   <figcaption>FIGURE 5. A rolling average of number of food eaten in each iterations versus the total number of
 iterations in evaluation
 </figcaption>
