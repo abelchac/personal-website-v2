@@ -37,16 +37,16 @@ export default function Home() {
   `
 
 
-  let cards = [ <ProjectCard project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>,
-    <ProjectCard project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>,
-    <ProjectCard project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>,
-    <ProjectCard project_svg_name="LyricGenAi.png" alt_text="" href="lyric_gen"/>,
-    <ProjectCard project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>,
-    <ProjectCard project_svg_name="RamCard.png" alt_text="" href="ram_design"/> ,
-    <ProjectCard project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>,
-    <ProjectCard project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
-    <ProjectCard project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />,
-    <ProjectCard project_svg_name="AdderCard.png" alt_text="" href="adder" />]
+  let cards = [ <ProjectCard key={0} project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>,
+    <ProjectCard key={1} project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>,
+    <ProjectCard key={2}  project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>,
+    <ProjectCard key={3} project_svg_name="LyricGenAi.png" alt_text="" href="lyric_gen"/>,
+    <ProjectCard key={4} project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>,
+    <ProjectCard key={5} project_svg_name="RamCard.png" alt_text="" href="ram_design"/> ,
+    <ProjectCard key={6} project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>,
+    <ProjectCard key={7} project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
+    <ProjectCard key={8} project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />,
+    <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text="" href="adder" />]
 
   
     const { ref, inView, entry } = useInView(
