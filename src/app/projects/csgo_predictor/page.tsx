@@ -479,7 +479,7 @@ export function Section3(){
   return (
     <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
     <div ref={ref}><h1>Extract data from HTML</h1>
-    <p>We downloaded the HTML files from players' match history pages on csgostats.gg to our drive folder, so we open them here. Each player's HTML file stores data for their games in a table, which we read onto a Pandas dataframe. Tables within the HTML files are accessed by using the XPATH that leads to each of these tables, which are consistent within each of the files. We then append these tables together to get our raw data dataframe.</p>
+    <p>We downloaded the HTML files from players&apos; match history pages on csgostats.gg to our drive folder, so we open them here. Each player&apos;s HTML file stores data for their games in a table, which we read onto a Pandas dataframe. Tables within the HTML files are accessed by using the XPATH that leads to each of these tables, which are consistent within each of the files. We then append these tables together to get our raw data dataframe.</p>
     <Code_block2></Code_block2>
     </div></InView>);
 
@@ -499,9 +499,9 @@ export function Section4(){
     <div ref={ref}><h1>Clean Data Using Pandas</h1>
     <p>We want to clean up our raw data so that we can visualize correlations and so that our data is usable for training.</p>
     <br></br>
-    <p>First we drop the columns we don't want to use, data, rank, and rating (the score from csgostats.gg own in-house rating system for that player's performance) and rename the remaining columns.</p>
+    <p>First we drop the columns we don&apos;t want to use, data, rank, and rating (the score from csgostats.gg own in-house rating system for that player&apos;s performance) and rename the remaining columns.</p>
     <br></br>
-    <p>Next, since csgostats.gg stores the round win-loss ratio for each game in the form of "WW:LL", we split that into two columns, a rounds won column and a rounds lost column. After that, we are able to add a column labeling the game as a win, draw, or loss, depending on the sign of the differences between the wins column and the losses column. We also find the length of the game by adding the number of rounds won and the number of rounds loss, and drop games that were not played to completion, i.e. it was the neither case that one team won 16 rounds nor that both teams won 15 rounds, drawing the game.</p>
+    <p>Next, since csgostats.gg stores the round win-loss ratio for each game in the form of &quot;WW:LL&quot;, we split that into two columns, a rounds won column and a rounds lost column. After that, we are able to add a column labeling the game as a win, draw, or loss, depending on the sign of the differences between the wins column and the losses column. We also find the length of the game by adding the number of rounds won and the number of rounds loss, and drop games that were not played to completion, i.e. it was the neither case that one team won 16 rounds nor that both teams won 15 rounds, drawing the game.</p>
     <br></br>
     <p>At first we labeled the maps with our numeric value with the hope that it would be usable for training. However, we later came to the conclusion that we did not want this column, so we drop it.</p>
     <br></br>
@@ -1349,7 +1349,7 @@ export function Section10(){
     </tr>
   </tbody>
 </table>
-    <p>The statistics of these games and the probability that they are labeled a victory is in line with our intuition that the player's statline is a good indicator for the result of the game. For example, in the first game, the player had 24 kills, 7 assists, and 16 deaths, a good performance. However, consider the third game from the top; this player did not perform particularly well, but the game is still labeled as a highly probably win, indicating that there is more to winning than just the player's statline.</p>
+    <p>The statistics of these games and the probability that they are labeled a victory is in line with our intuition that the player&apos;s statline is a good indicator for the result of the game. For example, in the first game, the player had 24 kills, 7 assists, and 16 deaths, a good performance. However, consider the third game from the top; this player did not perform particularly well, but the game is still labeled as a highly probably win, indicating that there is more to winning than just the player&apos;s statline.</p>
     <Code_block16></Code_block16>
     </div></InView>);
 
@@ -1391,7 +1391,7 @@ export function Section12(){
     <div ref={ref}>
     <h1>Conclusions</h1>
     
-    <p>At this point we concluded that linear regression would provide a better means of predicting the outcome of the game than a neural net would with the data collected. We believe this is because we do not have enough features or sufficiently complex characteristics in our data. Being limited by the data we can collect from sites like csgostats.gg, we do not believe we could get much better predictions from our current level of information. In particular, as CS:GO is a team-based 5v5 game, simply collecting data from a single player's impact on the game does not completely represent the quality of their team's play. Furthermore, that player's explicit statistics may not capture their impact on their teammates, such as communication, leadership, or other forms of assistance.</p>
+    <p>At this point we concluded that linear regression would provide a better means of predicting the outcome of the game than a neural net would with the data collected. We believe this is because we do not have enough features or sufficiently complex characteristics in our data. Being limited by the data we can collect from sites like csgostats.gg, we do not believe we could get much better predictions from our current level of information. In particular, as CS:GO is a team-based 5v5 game, simply collecting data from a single player&apos;s impact on the game does not completely represent the quality of their team's play. Furthermore, that player's explicit statistics may not capture their impact on their teammates, such as communication, leadership, or other forms of assistance.</p>
     </div>
     </InView>);
 
