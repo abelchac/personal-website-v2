@@ -24,7 +24,7 @@ export function ProjectCard(props : {project_svg_name : string, alt_text : strin
   }
   //console.log(inView);
   
-  let href = "/projects/" + props.href;
+  let href = "./projects/" + props.href;
   return (
     <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 zoom hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`} onMouseMove={mouseMove} onMouseOut={mouseOutFun} >
       <a href={href} >
