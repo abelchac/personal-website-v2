@@ -39,7 +39,7 @@ export default function RAM_Project() {
   based on your design’s delay (ie. write access time and read access time). Your max
   frequency must be greater than 500 MHz (ie. your memory must be able to operate
   with at least a 500 MHz clock).</li>
-  <section><Image loading="eager" className="!relative" fill  src="ram_design/ramlayout.png" alt={""}></Image></section>
+  <section><img   src="ram_design/ramlayout.png" alt={""}></img ></section>
   <li> We will concretely focus on an SRAM memory array with capacity of 16, holding
   4b-wide data elements.</li>
   <li> Inputs: 4-bit address, active high write enable (WE=1 for write, WE=0 for read),
@@ -61,7 +61,7 @@ output when desired. The enable on the phi_bar allows for the world line to rise
 after the new input values are processed.
     </p>
     <figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/decoder.png" alt={""}></Image>
+      <img   src="ram_design/decoder.png" alt={""}></img >
       <figcaption>Figure 1.1: Design of the decoder to be used in the selection of the rows</figcaption>
     </figure>
     
@@ -75,12 +75,12 @@ after the new input values are processed.
     <p>The tri-state buffer and inverter are necessary for controlling the wires within the
     memory in order to create areas of high impedance to isolate the inputs that are desired</p>
     <figure>
-     <Image loading="eager" className="!relative" fill  src="ram_design/tristate_buffer_1.png" alt={""}></Image> 
+     <img   src="ram_design/tristate_buffer_1.png" alt={""}></img > 
      <figcaption>Figure 1.2: Tri-state buffer design to be used in the column driver
      </figcaption>
     </figure>
     <figure>
-     <Image loading="eager" className="!relative" fill  src="ram_design/tristate_buffer_2.png" alt={""}></Image> 
+     <img   src="ram_design/tristate_buffer_2.png" alt={""}></img > 
      <figcaption>Figure 1.3: Tri-state inverter design to be used in the column driver
      </figcaption>
     </figure>
@@ -91,7 +91,7 @@ after the new input values are processed.
       </h3>
       
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/6t_sram.png" alt="" />
+        <img   src="ram_design/6t_sram.png" alt="" />
         <figcaption>Figure 1.4: Memory cell design for a single bit using 6T SRAM cell design</figcaption>
       </figure>
 
@@ -115,7 +115,7 @@ that the WL was able to charge the inputs fast enough</p>
 Taking a single column and placing 4 of cells next to each other will produce the 16
 words of length 4 bits.</p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/mem_col.png" alt="" />
+        <img   src="ram_design/mem_col.png" alt="" />
         <figcaption>Figure 1.4: The design of a single column of the memory
         that will be used to make the 4 bit long words</figcaption>
       </figure>
@@ -131,7 +131,7 @@ design to assure that even if the inputs change while the WE is on the stored ou
 be the one that is coinciding with the rising edge of the clock.
 </p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/io_bus.png" alt="" />
+        <img   src="ram_design/io_bus.png" alt="" />
         <figcaption>Figure 1.5: The design for the 4-bit IO bus.</figcaption>
       </figure>
       </section></div>)
@@ -150,7 +150,7 @@ placed at the bottom handling both the input and output values. The values are i
 read on the D0-3 lines.
 </p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/full_ram.png" alt="" />
+        <img   src="ram_design/full_ram.png" alt="" />
         <figcaption>Figure 1.6: The design for the full 16 words of 4 bits memory with peripherals
         </figcaption>
       </figure>
@@ -166,16 +166,16 @@ read on the D0-3 lines.
       </h3>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/val_decoder.png" alt="" />
+        <img   src="ram_design/val_decoder.png" alt="" />
         <figcaption>Figure 2.1: Test setup for decoder using 4 pulse generator to cover all 16 cases</figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/val_power.png" alt="" />
+        <img   src="ram_design/val_power.png" alt="" />
         <figcaption>Figure 2.2: Close-up of tht pulse generators each one has double the period of the next
         </figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/val_decoder_out.png" alt="" />
+        <img   src="ram_design/val_decoder_out.png" alt="" />
         <figcaption>Figure 2.2: Plot of the word outputs rising in their designated order
         </figcaption>
       </figure>
@@ -224,23 +224,23 @@ read on the D0-3 lines.
         </figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/tristate_val.png" alt="" />
+        <img   src="ram_design/tristate_val.png" alt="" />
         <figcaption>Figure 2.4: Test setup for the tri-state buffer
         </figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/tristate_inverter_val.png" alt="" />
+        <img   src="ram_design/tristate_inverter_val.png" alt="" />
         <figcaption>Figure 2.5: Test setup for the tri-state inverter
         </figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_6.png" alt="" />
+        <img   src="ram_design/figure_2_6.png" alt="" />
         <figcaption>Figure 2.6: Plot showing the outputs from the tri-state buffer. When enable is on the output is reflected by the input
         </figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_7.png" alt="" />
+        <img   src="ram_design/figure_2_7.png" alt="" />
         <figcaption>Figure 2.7: Plot showing the outputs from the tri-state inverter When enable is on the output is reflected by the inverted input
 
         </figcaption>
@@ -263,7 +263,7 @@ the sake of parsing. The same process for 0 then 1. Both values are read out aft
 the overwrite.
 </p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_8.png" alt="" />
+        <img   src="ram_design/figure_2_8.png" alt="" />
         <figcaption>Figure 2.8: Design of single bit memory test.</figcaption>
       </figure>
 
@@ -280,28 +280,28 @@ The 2 transistors emulate the bitline capacitance that would be seen in the full
 </p>
 
     <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_9.png" alt="" />
+        <img   src="ram_design/figure_2_9.png" alt="" />
         <figcaption>Figure 2.9:Annotated Plot of in, out, RE, and WE</figcaption>
       </figure>
 
       <div  className="grid grid-cols-2 gap-x-2 gap-y-2 ">
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_10.png" alt="" />
+        <img   src="ram_design/figure_2_10.png" alt="" />
         <figcaption>Figure 2.10: Plot of WE</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_11.png" alt="" />
+        <img   src="ram_design/figure_2_11.png" alt="" />
         <figcaption>Figure 2.11: Plot of In</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_12.png" alt="" />
+        <img   src="ram_design/figure_2_12.png" alt="" />
         <figcaption>Figure 2.12: Plot of out and RE.</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_13.png" alt="" />
+        <img   src="ram_design/figure_2_13.png" alt="" />
         <figcaption>Figure 2.13 Plot of out</figcaption>
       </figure>
       </div>
@@ -322,7 +322,7 @@ out above with correctness.</p>
       <p>The testing of the column memory was conducted on 2 of memory cells within
 the column</p>
 <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_14.png" alt="" />
+        <img   src="ram_design/figure_2_14.png" alt="" />
         <figcaption>Figure 2.14: The design for a 16 word (1 bit) testing        </figcaption>
       </figure>
       
@@ -342,35 +342,35 @@ could be stored within the single word. Observing the 4 plots of d0-3 it is poss
 observe each output rising in ascending order for counting from 0 to 15 in binary as d3 as
 the most significant bit.</p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_15.png" alt="" />
+        <img   src="ram_design/figure_2_15.png" alt="" />
         <figcaption>Figure 2.15: The design for a 1 word (4 bit) testing
         </figcaption>
       </figure>
       <br></br>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_16.png" alt="" />
+        <img   src="ram_design/figure_2_16.png" alt="" />
         <figcaption>Figure 2.16: Plot of d1-3 and WE</figcaption>
       </figure>
 
       <br></br>
       <div  className="grid grid-cols-2 gap-x-2 gap-y-2 ">
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_17.png" alt="" />
+        <img   src="ram_design/figure_2_17.png" alt="" />
         <figcaption>Figure 2.17: Plot of d0</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_18.png" alt="" />
+        <img   src="ram_design/figure_2_18.png" alt="" />
         <figcaption>Figure 2.18: Plot of d1</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_19.png" alt="" />
+        <img   src="ram_design/figure_2_19.png" alt="" />
         <figcaption>Figure 2.19: Plot of d2.</figcaption>
       </figure>
 
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_20.png" alt="" />
+        <img   src="ram_design/figure_2_20.png" alt="" />
         <figcaption>Figure 2.20 Plot of d3</figcaption>
       </figure>
       </div>
@@ -379,48 +379,48 @@ the most significant bit.</p>
 
 
     let figure_2_21 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_21.png" alt="" />
+      <img   src="ram_design/figure_2_21.png" alt="" />
       <figcaption>Figure 2.21: The design for a 16 word (4 bit) testing</figcaption>
     </figure>);
 
     let figure_2_22 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_22.png" alt="" />
+      <img   src="ram_design/figure_2_22.png" alt="" />
       <figcaption>Figure 2.22: Testing a single bit at the 1Ghz frequency to ensure operation</figcaption>
     </figure>);
 
     let figure_2_23 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_23.png" alt="" />
+      <img   src="ram_design/figure_2_23.png" alt="" />
       <figcaption>Figure 2.23: The pulse generator for controlling the decoder inputs giving 0-15 in 16ns</figcaption>
     </figure>);
     let figure_2_24 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_24.png" alt="" />
+      <img   src="ram_design/figure_2_24.png" alt="" />
       <figcaption>Figure 2.24: The inputs to the memory with pulse generator inputs giving 0-15 in 16n</figcaption>
     </figure>);
 
     let figure_2_25 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_25.png" alt="" />
+      <img   src="ram_design/figure_2_25.png" alt="" />
       <figcaption>Figure 2.25: Pulse generator for the WE writing for the first 16ns then reading for the next 16ns.</figcaption>
     </figure>);
     
     let figure_2_26 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_26.png" alt="" />
+      <img   src="ram_design/figure_2_26.png" alt="" />
       <figcaption>Figure 2.26: plot of WE, d0-3 (parsed in following figures)
       </figcaption>
     </figure>);
     let figure_2_27 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_27.png" alt="" />
+      <img   src="ram_design/figure_2_27.png" alt="" />
       <figcaption>Figure 2.27: Plot of the decoder input values ranging from 0-15</figcaption>
     </figure>);
     let figure_2_28 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_28.png" alt="" />
+      <img   src="ram_design/figure_2_28.png" alt="" />
       <figcaption>Figure 2.28: The plot of WE which is high for the first 16ns then low for 16ns</figcaption>
     </figure>);
     let figure_2_29 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_29.png" alt="" />
+      <img   src="ram_design/figure_2_29.png" alt="" />
       <figcaption>Figure 2.29: Plot of the input into writing memory values ranging from 0-15</figcaption>
     </figure>);
     let figure_2_30 = FadeInFactory(<figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/figure_2_30.png" alt="" />
+      <img   src="ram_design/figure_2_30.png" alt="" />
       <figcaption>Figure 2.30: Plot of the out of the reading memory values ranging from 0-15</figcaption>
     </figure>);
 
@@ -477,7 +477,7 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
       from any word line is the same.
       </p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_3_1.png" alt="" />
+        <img   src="ram_design/figure_3_1.png" alt="" />
         <figcaption>Figure 3.1: Plot of all changing values that affect memory</figcaption>
       </figure>
       <p>By observing the waveforms it, the bitline (yellow) is the value that is constantly the last
@@ -501,24 +501,24 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
       inputs D0-3 are fed with the same input which has a period of 32ns and pulse width of
       16ns which will give a solid 1 or 0 for the whole duration of selection of rows</p>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_3_1.png" alt="" />
+        <img   src="ram_design/figure_3_1.png" alt="" />
         <figcaption>Figure 3.1: Plot of all changing values that affect memory</figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_3_2.png" alt="" />
+        <img   src="ram_design/figure_3_2.png" alt="" />
         <figcaption>Figure 3.2: The voltage pulse that are inputs into the decoder</figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_3_3.png" alt="" />
+        <img   src="ram_design/figure_3_3.png" alt="" />
         <figcaption>Figure 3.3: The voltage pulse that drives the input into the memory
         </figcaption>
       </figure>
       <figure>
-        <Image loading="eager" className="!relative" fill  src="ram_design/figure_3_4.png" alt="" />
+        <img   src="ram_design/figure_3_4.png" alt="" />
         <figcaption>Figure 3.4: The plot of the voltage that drives the input into the memory
         </figcaption>
       </figure>
-      <Image loading="eager" className="!relative" fill  src="ram_design/yint.png" alt="" />
+      <img   src="ram_design/yint.png" alt="" />
       <p>The integral value of the power consumed for filling of 0s and 1s into the memory array.
       </p>
       <p>Total power expended: 6.50962 * 10<sup>-12</sup>W</p>

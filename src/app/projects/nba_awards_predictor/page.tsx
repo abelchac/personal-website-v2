@@ -67,13 +67,13 @@ following their teammates and teammates of those teammates to another MVP.
     <h2>Start the Program:</h2>
     <h2>Initial Screen:</h2>
     <p>The base table shows all current players in the NBA with all traditional statistics</p>
-    <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/start.png" alt={""}></Image>
+    <img  fill  src="nba_awards_predictor/start.png" alt={""}></img >
   </div>);
 
   let buttons = FadeInFactory(<div>
 
     <h2>Buttons:</h2>
-    <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/buttons.png" alt={""}></Image>
+    <img  fill  src="nba_awards_predictor/buttons.png" alt={""}></img >
     <p>The buttons to the right of the table allow the user to select which actions to take.</p>
     <p> MVP (Most Valuble Player): Will open up the MVP predictor screen</p>
     <p>DPOY (Defensive Player Of The Year): Will open up the DPOY predictor screen</p>
@@ -89,7 +89,7 @@ following their teammates and teammates of those teammates to another MVP.
 changed and the weight changes will be reflected on the sliders and the MVP score function. These values
 will compute new MVP Scores which are placed into the MVP score column for each player. This column
 is auto sorted so that the player with the highest score is at the top.</p>
-<Image loading="eager" className="!relative" fill  src="nba_awards_predictor/mvp.png" alt={""}></Image>
+<img  fill  src="nba_awards_predictor/mvp.png" alt={""}></img >
   </div>);
   
 let mvpSliders = FadeInFactory(<div>
@@ -98,7 +98,7 @@ let mvpSliders = FadeInFactory(<div>
   <p>To select the weights for the MVP score function, use the sliders that are to the right of
 the table if you wish to adjust how player statistics should be reflected in an MVP
 candidate.</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/mvp_sliders.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/mvp_sliders.png" alt={""}></img >
 
 </div>);
   
@@ -108,7 +108,7 @@ let mvp_score = FadeInFactory(<div>
   </h2>
   <p>The MVP SCORE function takes the weights from the sliders and changes the label of
   present in the frame, so that the user can see how all the weights apply.</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/mvp_score.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/mvp_score.png" alt={""}></img >
 
 </div>);
 
@@ -119,7 +119,7 @@ let dpoy = FadeInFactory(<div>
 be changed and the weight changes will be reflected on the sliders and the DPOY score function. These
 values will compute new DPOY Scores which are placed into the DPOY score column for each player.
 This column is auto sorted so that the player with the highest score is at the top.</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/dpoy.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/dpoy.png" alt={""}></img >
 
 </div>);
 
@@ -130,7 +130,7 @@ let dpoy_sliders = FadeInFactory(<div>
   <p>To select the weights for the DPOY score function, use the sliders that are to the right of
 the table if you wish to adjust how player statistics should be reflected in an DPOY
 candidate</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/dpoy_sliders.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/dpoy_sliders.png" alt={""}></img >
 
 </div>);
 
@@ -139,7 +139,7 @@ let dpoy_score = FadeInFactory(<div>
   <h2>DPOY SCORE FUNCTION</h2>
   <p>The DPOY SCORE function takes the weights from the sliders and changes the label of
   present in the frame, so that the user can see how all the weights apply.</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/dpoy_score.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/dpoy_score.png" alt={""}></img >
 
 </div>);
 
@@ -151,7 +151,7 @@ be changed and the weight changes will be reflected on the sliders and the ROTY 
 values will compute new ROTY Scores which are placed into the ROTY score column for each player.
 This column is auto sorted so that the player with the highest score is at the top.
 </p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/roy.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/roy.png" alt={""}></img >
 
 </div>);
 
@@ -162,7 +162,7 @@ let roty_sliders = FadeInFactory(<div>
   <p>To select the weights for the ROTY score function, use the sliders that are to the right of
 the table if you wish to adjust how player statistics should be reflected in an ROTY
 candidate.</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/roy_sliders.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/roy_sliders.png" alt={""}></img >
 
 </div>);
 
@@ -171,7 +171,7 @@ let roty_score = FadeInFactory(<div>
   <h2>ROTY SCORE FUNCTION</h2>
   <p>The ROTY SCORE function takes the weights from the sliders and changes the label of
   present in the frame, so that the user can see how all the weights apply</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/roy_score.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/roy_score.png" alt={""}></img >
 
 </div>);
 
@@ -185,7 +185,7 @@ MVP-BFS will not be able to run until the graph is fully scrapped from
 user will not have to wait for the graph to be built to be able to use the MVP-BFS functionality.
 However, all other aspects of the program will be full functionally because of the MVP-BFS
 graph being built on another thread</p>
-  <Image loading="eager" className="!relative" fill  src="nba_awards_predictor/mvp_bfs.png" alt={""}></Image>
+  <img  fill  src="nba_awards_predictor/mvp_bfs.png" alt={""}></img >
 
 </div>);
 

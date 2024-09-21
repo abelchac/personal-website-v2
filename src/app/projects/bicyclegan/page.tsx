@@ -496,7 +496,7 @@ approach to the problem is to implement BicycleGAN which is an extension of Cycl
 links basic GAN and VAE models in order to map an edge image into multiple RGB images,
 which CycleGAN is not capable of.
 </p>
-<section><Image loading="eager" className="!relative" fill  src="bicyclegan/example.png" alt={""}></Image></section>
+<section><img      src="bicyclegan/example.png" alt={""}></img ></section>
 </div>)
 
 let lit_review = FadeInFactory(<div>
@@ -576,15 +576,15 @@ let quantitative_results_table = quantitative_results();
 
 let result_images = FadeInFactory(<div>
     <h4>Step 0:</h4>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/step0.png" alt={""}></Image>
+  <img      src="bicyclegan/step0.png" alt={""}></img >
   <h4>Step 500:</h4>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/step500.png" alt={""}></Image>
+  <img      src="bicyclegan/step500.png" alt={""}></img >
   <h4>Step 1000:</h4>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/step1000.png" alt={""}></Image>
+  <img      src="bicyclegan/step1000.png" alt={""}></img >
   <h4>Step 4000:</h4>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/step4000.png" alt={""}></Image>
+  <img      src="bicyclegan/step4000.png" alt={""}></img >
   <h4>Step 99000:</h4>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/step99000.png" alt={""}></Image>
+  <img      src="bicyclegan/step99000.png" alt={""}></img >
 
 </div>
 );
@@ -593,16 +593,16 @@ let result_images = FadeInFactory(<div>
 let results_part2 = FadeInFactory(  <div><h3>Quantitative Evaluations</h3>
   {quantitative_results_table}
   <h3>Qualitative Evaluations</h3>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/qualitative.png" alt={""}></Image></div>)
+  <img      src="bicyclegan/qualitative.png" alt={""}></img ></div>)
 let results_sum = FadeInFactory(<div>
   <h2>5 Summary Of Results</h2>
   <h3>Evaluation Metrics</h3>
   <h4>Visualization of Training:</h4>
   <div  className="grid grid-cols-[repeat(auto-fill,minmax(6rem,50rem))] gap-x-2 gap-y-2 ">
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/total_loss.png" alt={""}></Image>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/generator_loss.png" alt={""}></Image>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/discrim_loss.png" alt={""}></Image>
-  <Image loading="eager" className="!relative" fill  src="bicyclegan/discrim_lr_loss.png" alt={""}></Image>
+  <img      src="bicyclegan/total_loss.png" alt={""}></img >
+  <img      src="bicyclegan/generator_loss.png" alt={""}></img >
+  <img      src="bicyclegan/discrim_loss.png" alt={""}></img >
+  <img      src="bicyclegan/discrim_lr_loss.png" alt={""}></img >
   </div>
 
   {result_images}

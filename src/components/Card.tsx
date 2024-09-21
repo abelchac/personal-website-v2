@@ -27,7 +27,7 @@ export function ProjectCard(props : {project_svg_name : string, alt_text : strin
   return (
     <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 zoom hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`} onMouseMove={mouseMove} onMouseOut={mouseOutFun} >
       <a href={href} >
-      <Image loading="eager" ref={ref} className={`place-items-center ProjectCard !relative`} fill  src={data_string} alt={props.alt_text}  />
+      <img ref={ref} className={`place-items-center ProjectCard`}  src={data_string} alt={props.alt_text}  />
       </a>
     </InView>
   );
