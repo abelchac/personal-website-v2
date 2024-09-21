@@ -8,7 +8,7 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -51,7 +51,7 @@ export default function RAM_Project() {
 
   </div>)
 
-  let design = fadeInFactory(<div>
+  let design = FadeInFactory(<div>
     <h2>1. Design:</h2>
       <section><h3>1.1 Decoder:</h3>
     <p>
@@ -69,7 +69,7 @@ after the new input values are processed.
 
   </div>)
 
-  let tristate_buffer = fadeInFactory(<div><section>
+  let tristate_buffer = FadeInFactory(<div><section>
     <h3>1.2 Tri-state Buffer/Inverter:
     </h3>
     <p>The tri-state buffer and inverter are necessary for controlling the wires within the
@@ -86,7 +86,7 @@ after the new input values are processed.
     </figure>
     </section></div>)
 
-    let memory_cell = fadeInFactory(<div><section>
+    let memory_cell = FadeInFactory(<div><section>
       <h3>1.3 Memory Cell:
       </h3>
       
@@ -108,7 +108,7 @@ that the WL was able to charge the inputs fast enough</p>
 
 
       
-    let memory_col = fadeInFactory(<div><section>
+    let memory_col = FadeInFactory(<div><section>
       <h3>1.4 Memory Column 16 words (1bit):
       </h3>
       <p>The memory column was made as both a testing block and for the sake of clarity.
@@ -122,7 +122,7 @@ words of length 4 bits.</p>
       </section></div>)
 
       
-    let io_bus = fadeInFactory(<div><section>
+    let io_bus = FadeInFactory(<div><section>
       <h3>1.5 4-bit IO Bus:
       </h3>
       <p>This 4-bit IO bus is used to interface with the ram driving the inputs and receiving
@@ -137,7 +137,7 @@ be the one that is coinciding with the rising edge of the clock.
       </section></div>)
 
           
-    let full_memory = fadeInFactory(<div><section>
+    let full_memory = FadeInFactory(<div><section>
       <h3>1.6 Full Memory (16 words of 4 bits):
       </h3>
       <p>The design of the full memory with IO is layed out into 16 rows and 4 columns to
@@ -157,7 +157,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let validation = fadeInFactory(<div>
+    let validation = FadeInFactory(<div>
             <h2>2. Validation:
             </h2>
       <section>
@@ -185,7 +185,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let validation_tri_state = fadeInFactory(<div><section>
+    let validation_tri_state = FadeInFactory(<div><section>
       <h3>2.2 Tri-state Buffer/Inverter:
       </h3>
       <figure>
@@ -249,7 +249,7 @@ read on the D0-3 lines.
       </section></div>)
 
             
-    let memory_cell_val = fadeInFactory(<div><section>
+    let memory_cell_val = FadeInFactory(<div><section>
       <h3>2.3 Memory Cell:
 
       </h3>
@@ -316,7 +316,7 @@ out above with correctness.</p>
       </section></div>)
     
             
-    let mem_col_val = fadeInFactory(<div><section>
+    let mem_col_val = FadeInFactory(<div><section>
       <h3>2.4 Memory Column 16 words (1bit):
       </h3>
       <p>The testing of the column memory was conducted on 2 of memory cells within
@@ -329,7 +329,7 @@ the column</p>
       </section></div>)
 
             
-    let mem_row_val = fadeInFactory(<div><section>
+    let mem_row_val = FadeInFactory(<div><section>
       <h3>2.5 Memory Row 1 Word (4bit):
       </h3>
       <p>The memory row design was solely made for testing purposes to determine if a
@@ -378,53 +378,53 @@ the most significant bit.</p>
       </section></div>)
 
 
-    let figure_2_21 = fadeInFactory(<figure>
+    let figure_2_21 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_21.png" alt="" />
       <figcaption>Figure 2.21: The design for a 16 word (4 bit) testing</figcaption>
     </figure>);
 
-    let figure_2_22 = fadeInFactory(<figure>
+    let figure_2_22 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_22.png" alt="" />
       <figcaption>Figure 2.22: Testing a single bit at the 1Ghz frequency to ensure operation</figcaption>
     </figure>);
 
-    let figure_2_23 = fadeInFactory(<figure>
+    let figure_2_23 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_23.png" alt="" />
       <figcaption>Figure 2.23: The pulse generator for controlling the decoder inputs giving 0-15 in 16ns</figcaption>
     </figure>);
-    let figure_2_24 = fadeInFactory(<figure>
+    let figure_2_24 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_24.png" alt="" />
       <figcaption>Figure 2.24: The inputs to the memory with pulse generator inputs giving 0-15 in 16n</figcaption>
     </figure>);
 
-    let figure_2_25 = fadeInFactory(<figure>
+    let figure_2_25 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_25.png" alt="" />
       <figcaption>Figure 2.25: Pulse generator for the WE writing for the first 16ns then reading for the next 16ns.</figcaption>
     </figure>);
     
-    let figure_2_26 = fadeInFactory(<figure>
+    let figure_2_26 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_26.png" alt="" />
       <figcaption>Figure 2.26: plot of WE, d0-3 (parsed in following figures)
       </figcaption>
     </figure>);
-    let figure_2_27 = fadeInFactory(<figure>
+    let figure_2_27 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_27.png" alt="" />
       <figcaption>Figure 2.27: Plot of the decoder input values ranging from 0-15</figcaption>
     </figure>);
-    let figure_2_28 = fadeInFactory(<figure>
+    let figure_2_28 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_28.png" alt="" />
       <figcaption>Figure 2.28: The plot of WE which is high for the first 16ns then low for 16ns</figcaption>
     </figure>);
-    let figure_2_29 = fadeInFactory(<figure>
+    let figure_2_29 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_29.png" alt="" />
       <figcaption>Figure 2.29: Plot of the input into writing memory values ranging from 0-15</figcaption>
     </figure>);
-    let figure_2_30 = fadeInFactory(<figure>
+    let figure_2_30 = FadeInFactory(<figure>
       <img src="ram_design/figure_2_30.png" alt="" />
       <figcaption>Figure 2.30: Plot of the out of the reading memory values ranging from 0-15</figcaption>
     </figure>);
 
-    let full_mem_val = fadeInFactory(<div><section>
+    let full_mem_val = FadeInFactory(<div><section>
       <h3>2.6 Full Memory (16 words of 4 bits):
       </h3>
       <p>The first objective was just to increase the frequency of the clock, from 500Mhz, to stress test the
@@ -455,7 +455,7 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
 
 
           
-    let design_metrics = fadeInFactory(<div>
+    let design_metrics = FadeInFactory(<div>
       <h2>3. Design Metrics:</h2>
       <section>
       <h3>3.1 Memory Cell Area:
@@ -468,7 +468,7 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
       </section></div>)
 
 
-    let delay = fadeInFactory(<div><section>
+    let delay = FadeInFactory(<div><section>
       <h3>3.2 Delay:
       </h3>
       <p>Operation to find critical path of read and write: W0 R0 W1 R1
@@ -492,7 +492,7 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
 
       </section></div>)
 
-    let power = fadeInFactory(<div><section>
+    let power = FadeInFactory(<div><section>
       <h3>3.3 Power:
       </h3>
       <p>The decoder is given inputs much like the decoder test in section 2.1. The A0 bit
@@ -529,7 +529,7 @@ Testing operation(1 cell in memory): W0 R0 R0 W1 R1 R1 W0 R0 W1 R1 W1 R1 W0 R0</
 
       </section></div>)
           
-    let fom = fadeInFactory(<div><section>
+    let fom = FadeInFactory(<div><section>
       <br></br>
       <h3> 3.4 FOM:
       </h3>

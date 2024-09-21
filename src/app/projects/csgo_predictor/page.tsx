@@ -1391,7 +1391,7 @@ export function Section12(){
     <div ref={ref}>
     <h1>Conclusions</h1>
     
-    <p>At this point we concluded that linear regression would provide a better means of predicting the outcome of the game than a neural net would with the data collected. We believe this is because we do not have enough features or sufficiently complex characteristics in our data. Being limited by the data we can collect from sites like csgostats.gg, we do not believe we could get much better predictions from our current level of information. In particular, as CS:GO is a team-based 5v5 game, simply collecting data from a single player&apos;s impact on the game does not completely represent the quality of their team's play. Furthermore, that player's explicit statistics may not capture their impact on their teammates, such as communication, leadership, or other forms of assistance.</p>
+    <p>At this point we concluded that linear regression would provide a better means of predicting the outcome of the game than a neural net would with the data collected. We believe this is because we do not have enough features or sufficiently complex characteristics in our data. Being limited by the data we can collect from sites like csgostats.gg, we do not believe we could get much better predictions from our current level of information. In particular, as CS:GO is a team-based 5v5 game, simply collecting data from a single player&apos;s impact on the game does not completely represent the quality of their team&apos;s play. Furthermore, that player&apos;s explicit statistics may not capture their impact on their teammates, such as communication, leadership, or other forms of assistance.</p>
     </div>
     </InView>);
 
