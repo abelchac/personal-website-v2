@@ -6,7 +6,7 @@ import React, { useRef, useCallback, use, useEffect } from "react";
 import { useInView, InView} from "react-intersection-observer";
 import { ProjectCard } from "@/components/Card";
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -63,7 +63,7 @@ export default function Home() {
       entry?.target.classList.remove('shown');
     }
     
-    let project_title = fadeInFactory(<div><h1 className="center ProjectTitle">Projects</h1></div>);
+    let project_title = FadeInFactory(<div><h1 className="center ProjectTitle">Projects</h1></div>);
   return (
     
   <section>

@@ -9,7 +9,7 @@ import { start } from "repl";
 
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -30,7 +30,7 @@ export default function NbaAwardsProject() {
     <Link href="https://github.com/abelchac/nba_awards_predictor"> <h2>Project Link: https://github.com/abelchac/nba_awards_predictor</h2></Link>
     </div>);
 
-  let description = fadeInFactory(<div>
+  let description = FadeInFactory(<div>
     <h2>Description:</h2>
     <p>Description: We are interested in the NBA and particularly how different awards are given out. As a result,
 designed a program that takes into the account the statistics of each player in the league and calculates
@@ -47,7 +47,7 @@ also included an additional function that finds the shortest path between one MV
 teammates. </p>
   </div>);
 
-  let relevant_cat = fadeInFactory(<div>
+  let relevant_cat = FadeInFactory(<div>
     <h2>Relevant categories:</h2>
     <p>Our projects uses Document Search or Information Retrieval techniques to find and 
 store each player's statistics in a table. This is seen in several places. To compile the main table, we
@@ -62,7 +62,7 @@ following their teammates and teammates of those teammates to another MVP.
 </p>
   </div>);
     
-  let startScreen = fadeInFactory(<div>
+  let startScreen = FadeInFactory(<div>
 
     <h2>Start the Program:</h2>
     <h2>Initial Screen:</h2>
@@ -70,7 +70,7 @@ following their teammates and teammates of those teammates to another MVP.
     <img src="nba_awards_predictor/start.png"></img>
   </div>);
 
-  let buttons = fadeInFactory(<div>
+  let buttons = FadeInFactory(<div>
 
     <h2>Buttons:</h2>
     <img src="nba_awards_predictor/buttons.png"></img>
@@ -82,7 +82,7 @@ following their teammates and teammates of those teammates to another MVP.
     <p>RESET: Reset the tables and take the user back to the initial screen</p>
   </div>);    
   
-  let mvp = fadeInFactory(<div>
+  let mvp = FadeInFactory(<div>
 
     <h2>MVP </h2>
     <p>The MVP predictor screen will appear like this with initial weights on the sliders set. These sliders can be
@@ -92,7 +92,7 @@ is auto sorted so that the player with the highest score is at the top.</p>
 <img src="nba_awards_predictor/mvp.png"></img>
   </div>);
   
-let mvpSliders = fadeInFactory(<div>
+let mvpSliders = FadeInFactory(<div>
 
   <h2>MVP SLIDERS</h2>
   <p>To select the weights for the MVP score function, use the sliders that are to the right of
@@ -102,7 +102,7 @@ candidate.</p>
 
 </div>);
   
-let mvp_score = fadeInFactory(<div>
+let mvp_score = FadeInFactory(<div>
 
   <h2>MVP SCORE FUNCTION
   </h2>
@@ -112,7 +112,7 @@ let mvp_score = fadeInFactory(<div>
 
 </div>);
 
-let dpoy = fadeInFactory(<div>
+let dpoy = FadeInFactory(<div>
 
   <h2>DPOY</h2>
   <p>The DPOY predictor screen will appear like this with initial weights on the sliders set. These sliders can
@@ -123,7 +123,7 @@ This column is auto sorted so that the player with the highest score is at the t
 
 </div>);
 
-let dpoy_sliders = fadeInFactory(<div>
+let dpoy_sliders = FadeInFactory(<div>
 
   <h2>DPOY SLIDERS
   </h2>
@@ -134,7 +134,7 @@ candidate</p>
 
 </div>);
 
-let dpoy_score = fadeInFactory(<div>
+let dpoy_score = FadeInFactory(<div>
 
   <h2>DPOY SCORE FUNCTION</h2>
   <p>The DPOY SCORE function takes the weights from the sliders and changes the label of
@@ -143,7 +143,7 @@ let dpoy_score = fadeInFactory(<div>
 
 </div>);
 
-let roty = fadeInFactory(<div>
+let roty = FadeInFactory(<div>
 
   <h2>ROTY</h2>
   <p>The ROTY predictor screen will appear like this with initial weights on the sliders set. These sliders can
@@ -155,7 +155,7 @@ This column is auto sorted so that the player with the highest score is at the t
 
 </div>);
 
-let roty_sliders = fadeInFactory(<div>
+let roty_sliders = FadeInFactory(<div>
 
   <h2>ROTY SLIDERS
   </h2>
@@ -166,7 +166,7 @@ candidate.</p>
 
 </div>);
 
-let roty_score = fadeInFactory(<div>
+let roty_score = FadeInFactory(<div>
 
   <h2>ROTY SCORE FUNCTION</h2>
   <p>The ROTY SCORE function takes the weights from the sliders and changes the label of
@@ -175,7 +175,7 @@ let roty_score = fadeInFactory(<div>
 
 </div>);
 
-let mvp_bfs = fadeInFactory(<div>
+let mvp_bfs = FadeInFactory(<div>
 
   <h2>MVP-BFS</h2>
   <p>Select a former MVP winner from each of the 2 lists and press find path to generate the shortest
