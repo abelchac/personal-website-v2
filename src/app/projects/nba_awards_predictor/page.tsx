@@ -76,7 +76,7 @@ following their teammates and teammates of those teammates to another MVP.
     <img src="nba_awards_predictor/buttons.png"></img>
     <p>The buttons to the right of the table allow the user to select which actions to take.</p>
     <p> MVP (Most Valuble Player): Will open up the MVP predictor screen</p>
-    <p>>DPOY (Defensive Player Of The Year): Will open up the DPOY predictor screen</p>
+    <p>DPOY (Defensive Player Of The Year): Will open up the DPOY predictor screen</p>
     <p>ROTY (Rookie Of The Year): Will open up the ROTY predictor screen</p>
     <p>MVP-BFS: Will open up the MVP-BFS screen</p>
     <p>RESET: Reset the tables and take the user back to the initial screen</p>

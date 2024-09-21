@@ -47,7 +47,7 @@ export default function MusicStreamingProject() {
 
         </section>
         <li>Similar to the above, the server should be able to handle new commands without needing to finish sending the previous file. For instance, if it receives a list command during playback of a giant music file, the client should be able to see the list of songs immediately.</li>
-        <li>The client should not cache data. In other words, if the user tells the client to get a song list or play a song, the two should exchange messages to facilitate this. Don't retrieve an item from the server once and then repeat it back again on subsequent requests.</li>
+        <li>The client should not cache data. In other words, if the user tells the client to get a song list or play a song, the two should exchange messages to facilitate this. Don&apos;t retrieve an item from the server once and then repeat it back again on subsequent requests.</li>
       </ul>
 
     </section>
