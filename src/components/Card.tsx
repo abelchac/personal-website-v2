@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 export function ProjectCard(props : {project_svg_name : string, alt_text : string, href : string}){
-  let data_string = '/cards/' + props.project_svg_name;
+  let data_string = 'cards/' + props.project_svg_name;
   
   const { ref, inView, entry } = useInView(
     {
