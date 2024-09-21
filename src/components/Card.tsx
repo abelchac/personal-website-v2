@@ -23,11 +23,11 @@ export function ProjectCard(props : {project_svg_name : string, alt_text : strin
     entry?.target.classList.remove('show');
   }
   //console.log(inView);
-  let href = "~/projects/" + props.href;
+  let href = "/projects/" + props.href;
   return (
     <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 zoom hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`} onMouseMove={mouseMove} onMouseOut={mouseOutFun} >
       <a href={href} >
-      <Image loading="eager" fill ref={ref} className={`place-items-center ProjectCard !relative`} src={data_string} alt={props.alt_text}  />
+      <Image loading="eager" ref={ref} className={`place-items-center ProjectCard !relative`} fill  src={data_string} alt={props.alt_text}  />
       </a>
     </InView>
   );
