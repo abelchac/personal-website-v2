@@ -37,7 +37,7 @@ designed a program that takes into the account the statistics of each player in 
 a score using the data. We begin with a table that displays each player and their statistics. From there, 
 depending on the award chosen (MVP, ROTY, DPOY), uses different statistics to narrow down candidates for
 each award and show which players have the best statistics for the award. Furthermore, the weight that 
-each statistic carries in the calculations can be modified to best fit the user's preference for which 
+each statistic carries in the calculations can be modified to best fit the user&apos;s preference for which 
 statistics that matter most. We also have a MVP-BFS function that finds a path of players, beginning with
 an MVP and through their teammates, creating a path to another MVP. All in all, we have designed a
 program that compiles the statistics of all current NBA players in a table. From there, we can narrow down
@@ -50,7 +50,7 @@ teammates. </p>
   let relevant_cat = FadeInFactory(<div>
     <h2>Relevant categories:</h2>
     <p>Our projects uses Document Search or Information Retrieval techniques to find and 
-store each player's statistics in a table. This is seen in several places. To compile the main table, we
+store each player&apos;s statistics in a table. This is seen in several places. To compile the main table, we
 retrieve information from <Link href="https://www.nba.com/stats/"> https://www.nba.com/stats/</Link> and store them as JSON Objects. The second place
 we use this is in the MVP-BFS function, where we obtain teammates for each MVP and their teammates as
 well, using the base link: <Link href="https://basketball.realgm.com/">https://basketball.realgm.com/</Link>, and modifying it to obtain a new link and 
