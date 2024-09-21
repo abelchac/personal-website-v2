@@ -7,7 +7,7 @@ import { useInView, InView} from "react-intersection-observer";
 import { CodeBlock, dracula } from 'react-code-blocks';
 
 
-export  function Code_block1(){
+  function Code_block1(){
   let text = `import os
 from google.colab import drive
 import pandas as pd
@@ -36,7 +36,7 @@ Drive already mounted at /content/gdrive; to attempt to forcibly remount, call d
 
 
 
-export  function Code_block2(){
+  function Code_block2(){
   let text = `total_rows = 0;
 data_df = pd.DataFrame()
 for root, dirs, files in os.walk(path):
@@ -54,7 +54,7 @@ for root, dirs, files in os.walk(path):
 }
 
 
-export  function Code_block3(){
+  function Code_block3(){
   let text = `  import numpy as np
 import math
 
@@ -104,7 +104,7 @@ cleaned_df`
 
 
 
-export  function Code_block4(){
+  function Code_block4(){
   let text = `norm_df = cleaned_df.copy(deep=True)
 norm_df = norm_df.drop(columns=['map_label', 'result'])
 cleaned_df_mean = norm_df.mean()
@@ -116,7 +116,7 @@ norm_df`
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block5(){
+  function Code_block5(){
   let text = `import seaborn as sn
 import matplotlib.pyplot as plt
 
@@ -170,7 +170,7 @@ for t, l in zip(kd_plot_scatter.legend_.texts, new_labels): t.set_text(l)`
 }
 
 
-export  function Code_block6(){
+  function Code_block6(){
   let text = `from torch.utils.data import TensorDataset, DataLoader
 pyTorchData = norm_df.copy(deep=True)
 for v in pyTorchData.columns: 
@@ -215,7 +215,7 @@ test_loader = torch.utils.data.DataLoader(test_data, batch_size = 10, shuffle = 
 }
 
 
-export  function Code_block7(){
+  function Code_block7(){
   let text = `def create_fnn(in_size, num_classes):
 
     net = nn.Sequential(
@@ -236,7 +236,7 @@ export  function Code_block7(){
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block8(){
+  function Code_block8(){
   let text = `win_results = []
 def compute_accuracy(net, dataloader, device="cpu"):
     with torch.no_grad():
@@ -253,7 +253,7 @@ def compute_accuracy(net, dataloader, device="cpu"):
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block9(){
+  function Code_block9(){
   let text = `def train_nn(net, trainloader, validloader, eval_freq, num_epochs, device="cpu"):
   
     net.to(device)
@@ -282,7 +282,7 @@ export  function Code_block9(){
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block10(){
+  function Code_block10(){
   let text = `def create_acc_curve(train_acc, valid_acc, eval_freq):
     fig, ax = plt.subplots()
     plt.figure()
@@ -301,7 +301,7 @@ export  function Code_block10(){
 }
 
 
-export  function Code_block11(){
+  function Code_block11(){
   let text = `%%time
 if __name__ == '__main__':
     device = "cuda"
@@ -323,7 +323,7 @@ Wall time: 4min 38s`
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block12(){
+  function Code_block12(){
   let text = `create_acc_curve(train_acc, valid_acc, eval_freq);
 `
 
@@ -331,14 +331,14 @@ export  function Code_block12(){
 }
 
 
-export  function Code_block13(){
+  function Code_block13(){
   let text = `torch.save(nn_model, "model.pkl")
 `
 
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block14(){
+  function Code_block14(){
   let text = `def compute_accuracy_with_confidence(net, dataloader, device="cpu"):
     with torch.no_grad():
         tot_correct = 0
@@ -371,7 +371,7 @@ for p in accuracies_plot.patches:
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block15(){
+  function Code_block15(){
   let text = `sets = ["Win", "Loss", "Tie"]
 
 percent_loss = sum(cleaned_df['result'] == 0) / len(cleaned_df)
@@ -390,7 +390,7 @@ for p in precent_result_plot.patches:
   return (<CodeBlock text={text} language="python" theme={dracula}></CodeBlock>)
 }
 
-export  function Code_block16(){
+  function Code_block16(){
   let text = `win_results.sort(key=lambda x: x[1], reverse=True)
 sorted_results = [result[0] for result in win_results]
 sorted_result_df = pd.DataFrame(sorted_results)
@@ -424,7 +424,7 @@ sorted_result_df
 
 
 
-export function Section1(){
+ function Section1(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -445,7 +445,7 @@ export function Section1(){
 }
 
 
-export function Section2(){
+ function Section2(){
     
   const { ref, inView, entry } = useInView(
     {
@@ -467,7 +467,7 @@ export function Section2(){
 
 }
 
-export function Section3(){
+ function Section3(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -485,7 +485,7 @@ export function Section3(){
 
 }
 
-export function Section4(){
+ function Section4(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -761,7 +761,7 @@ export function Section4(){
 
 }
 
-export function Section5(){
+ function Section5(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1003,7 +1003,7 @@ export function Section5(){
 
 }
 
-export function Section6(){
+ function Section6(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1040,7 +1040,7 @@ export function Section6(){
 
 }
 
-export function Section7(){
+ function Section7(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1057,7 +1057,7 @@ export function Section7(){
 
 }
 
-export function Section8(){
+ function Section8(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1081,7 +1081,7 @@ export function Section8(){
 
 }
 
-export function Section9(){
+ function Section9(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1104,7 +1104,7 @@ export function Section9(){
 
 }
 
-export function Section10(){
+ function Section10(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1356,7 +1356,7 @@ export function Section10(){
 }
 
 
-export function Section11(){
+ function Section11(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -1378,7 +1378,7 @@ export function Section11(){
 }
 
 
-export function Section12(){
+ function Section12(){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
