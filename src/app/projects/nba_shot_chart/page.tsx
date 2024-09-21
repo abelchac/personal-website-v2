@@ -54,7 +54,7 @@ nba_api library (https://github.com/swar/nba_api) and will
 be parsed using pandas. The data will be held peristently through
 pickle as not to time out the api. The visualization and UI will be 
 made by using tkinter, matplotlib, and seaborn. </p>
-<img src="nba_shot_chart/example.png"></img>
+<Image src="nba_shot_chart/example.png" alt={""}></Image>
 </div>
 );
 

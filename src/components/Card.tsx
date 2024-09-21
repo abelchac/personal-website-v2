@@ -2,6 +2,8 @@
 import { useInView, InView} from "react-intersection-observer";
 
 import "../app/globals.css";
+import React from "react";
+import Image from "next/image";
 
 
 export function ProjectCard(props : {project_svg_name : string, alt_text : string, href : string}){
@@ -26,7 +28,7 @@ export function ProjectCard(props : {project_svg_name : string, alt_text : strin
   return (
     <InView as="div" onChange={(_, entry) => {entry.target.children[0].classList.add('shown')}} className={`transition-opacity duration-1000 zoom hid ${inView ? 'opacity-100 shown' : 'opacity-0'}`} onMouseMove={mouseMove} onMouseOut={mouseOutFun} >
       <a href={href} >
-      <img  ref={ref} className={`place-items-center ProjectCard`} src={data_string} alt={props.alt_text}  />
+      <Image  ref={ref} className={`place-items-center ProjectCard`} src={data_string} alt={props.alt_text}  />
       </a>
     </InView>
   );
@@ -96,7 +98,7 @@ const mouseMove = (e: any) => {
 //         aria-label="Expand the Pokemon Card; {name}."
 //         tabIndex="0"
 //         >
-//         <img
+//         <Image
 //           className="card__back"
 //           src={back_img}
 //           alt="The back of a Pokemon Card, a Pokeball in the center with Pokemon logo above and below"
@@ -106,7 +108,7 @@ const mouseMove = (e: any) => {
 //         />
 //         <div className="card__front" 
 //           style={ staticStyles + foilStyles }>
-//           <img
+//           <Image
 //             src={front_img}
 //             alt="Front design of the {name} Pokemon Card, with the stats and info around the edge"
 //             onLoad={imageLoader}
