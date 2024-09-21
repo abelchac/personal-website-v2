@@ -8,7 +8,7 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -475,9 +475,9 @@ export default function BicycleGANProject() {
     </div>);
 
   
-  let video = fadeInFactory(<video controls src="bicyclegan/BicycleGan.mov"></video>);
+  let video = FadeInFactory(<video controls src="bicyclegan/BicycleGan.mov"></video>);
 
-  let abstract = fadeInFactory(<div>
+  let abstract = FadeInFactory(<div>
     <h2>Abstract</h2>
     <p>In the problem of single image-to-image translation, the model learns a single output for each
 input image of the edge given, with ambiguous generation. Thus in the many image-to-image
@@ -487,7 +487,7 @@ that takes in a latent vector that is randomly sampled to develop this distribut
 </p>
   </div>)
 
-let problem = fadeInFactory(<div>
+let problem = FadeInFactory(<div>
   
   <h2>1 Problem/Introduction</h2>
   <p>The problem that is proposed is to develop a method to generate a many image-to-image model,
@@ -499,7 +499,7 @@ which CycleGAN is not capable of.
 <section><img src="bicyclegan/example.png"></img></section>
 </div>)
 
-let lit_review = fadeInFactory(<div>
+let lit_review = FadeInFactory(<div>
   <h2>2 Literature Review
   </h2>
   <p>BicycleGAN consists of two major modules, cVAE-GAN and cLR-GAN.
@@ -514,7 +514,7 @@ diverse and conditional set of output images [1].
 </p>
 </div>)
 
-let exp_sum = fadeInFactory(<div>
+let exp_sum = FadeInFactory(<div>
   <h2>3 Experiments Summary</h2>
   <p>We began our experiments using the Edges2shoes dataset. This data set consists of paired images
 of a single object and its edges, for a total resolution of 512 by 256 pixels. Each object takes up
@@ -527,13 +527,13 @@ of the latent vector. Our findings showed that using the “add to all” method
 article, gave more noise that allowed for a more normal distribution of possible output images.</p>
 </div>)
 
-let genTable = fadeInFactory(generator_down_table());
-let linearLayerOut = fadeInFactory(linearLayer());
-let generator_up_table_out = fadeInFactory(generator_up_table());
-let processingLayerOut = fadeInFactory(processingLayer());
-let discrim = fadeInFactory(discriminator());
+let genTable = FadeInFactory(generator_down_table());
+let linearLayerOut = FadeInFactory(linearLayer());
+let generator_up_table_out = FadeInFactory(generator_up_table());
+let processingLayerOut = FadeInFactory(processingLayer());
+let discrim = FadeInFactory(discriminator());
 
-let method = fadeInFactory
+let method = FadeInFactory
 (<div>
 
   <h2>4 Methodology</h2>
@@ -574,7 +574,7 @@ and the fake label with prediction for a fake image.</p>
 
 let quantitative_results_table = quantitative_results();
 
-let result_images = fadeInFactory(<div>
+let result_images = FadeInFactory(<div>
     <h4>Step 0:</h4>
   <img src="bicyclegan/step0.png"></img>
   <h4>Step 500:</h4>
@@ -590,11 +590,11 @@ let result_images = fadeInFactory(<div>
 );
 
 
-let results_part2 = fadeInFactory(  <div><h3>Quantitative Evaluations</h3>
+let results_part2 = FadeInFactory(  <div><h3>Quantitative Evaluations</h3>
   {quantitative_results_table}
   <h3>Qualitative Evaluations</h3>
   <img src="bicyclegan/qualitative.png"></img></div>)
-let results_sum = fadeInFactory(<div>
+let results_sum = FadeInFactory(<div>
   <h2>5 Summary Of Results</h2>
   <h3>Evaluation Metrics</h3>
   <h4>Visualization of Training:</h4>
@@ -610,7 +610,7 @@ let results_sum = fadeInFactory(<div>
 
 </div>)
 
-let conclusion = fadeInFactory(<div>
+let conclusion = FadeInFactory(<div>
   <h2>Conclusion
   </h2>
   <p>The results that are created by our model are diverse and are conditionally based on our latent
@@ -625,7 +625,7 @@ image outputs.
 </p>
 </div>)
 
-let references = fadeInFactory(<div>
+let references = FadeInFactory(<div>
   <h2>References</h2>
   <p>[1] Zhu, J. Y., Zhang, R., Pathak, D., Darrell, T., Efros, A. A., Wang, O., & Shechtman, E. (2017).
 Multimodal Image-to-Image Translation by Enforcing Bi-Cycle Consistency. In Advances in neural

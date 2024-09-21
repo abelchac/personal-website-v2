@@ -8,7 +8,7 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */

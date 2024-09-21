@@ -7,7 +7,7 @@ import { CodeBlock, dracula } from "react-code-blocks";
 import { useInView, InView} from "react-intersection-observer";
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -26,7 +26,7 @@ export default function ShotChartProject() {
 
 
 
-let video_section = fadeInFactory(
+let video_section = FadeInFactory(
   <video  controls src="nba_shot_chart/shot_chart_demo.mp4"/>);
 let section1 =  (<div className=""><h1>NBA Shot Chart Visualizer</h1>
   <Link href="https://github.com/abelchac/Nba-Shot-Charts"> <h2>Project Link: https://github.com/abelchac/Nba-Shot-Charts</h2></Link>
@@ -34,7 +34,7 @@ let section1 =  (<div className=""><h1>NBA Shot Chart Visualizer</h1>
 
 
 
-let section2 = fadeInFactory(  <div>
+let section2 = FadeInFactory(  <div>
   <br></br>
   <p>NBA_SHOT_CHART produces a visualization of player or team 
 shot charts. Selection of player or team can be done 
@@ -61,7 +61,7 @@ made by using tkinter, matplotlib, and seaborn. </p>
 let section3_text = `tkinter  
 pickle  `
 
-let section3 = fadeInFactory(<div><h2>First-party modules:</h2>
+let section3 = FadeInFactory(<div><h2>First-party modules:</h2>
 <br></br>
  <CodeBlock text={section3_text} language="python" theme={dracula} showLineNumbers={false}></CodeBlock>
  </div>)
@@ -70,7 +70,7 @@ let section4_text = `pandas
 matplot_lib  
 nba_api  
 `
-let section4 = fadeInFactory(<div><h2>Third-part modules:</h2>
+let section4 = FadeInFactory(<div><h2>Third-part modules:</h2>
 <br></br>
  <CodeBlock text={section4_text} language="python" theme={dracula} showLineNumbers={false}></CodeBlock>
  </div>)
@@ -78,7 +78,7 @@ let section4 = fadeInFactory(<div><h2>Third-part modules:</h2>
 let section5_text = `pip install nba_api  
 pip install pandas  
 pip install matplotlib`
-let section5 = fadeInFactory(<div>
+let section5 = FadeInFactory(<div>
   <h2>Installation</h2>
   <h3>Requirements:</h3>
   <CodeBlock text={section5_text} language="python" theme={dracula} showLineNumbers={false}></CodeBlock>
@@ -103,23 +103,23 @@ let section6_7_text = `Contains function for getting the shot data of a single p
 
 
 
-let section6_1 = fadeInFactory(<h2>Code Strucutre</h2>);
-let section6_2 = fadeInFactory(<div><h3>UiMain.py</h3>
+let section6_1 = FadeInFactory(<h2>Code Strucutre</h2>);
+let section6_2 = FadeInFactory(<div><h3>UiMain.py</h3>
 <CodeBlock text={section6_2_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 </div>);
-let section6_3 = fadeInFactory(<div><h3>draw_court.py</h3>
+let section6_3 = FadeInFactory(<div><h3>draw_court.py</h3>
 <CodeBlock text={section6_3_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 </div>);
-let section6_4 = fadeInFactory(<div><h3>draw_ranges.py</h3>
+let section6_4 = FadeInFactory(<div><h3>draw_ranges.py</h3>
 <CodeBlock text={section6_4_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 </div>);
-let section6_5 = fadeInFactory(<div><h3>playerTeamClass.py</h3>
+let section6_5 = FadeInFactory(<div><h3>playerTeamClass.py</h3>
 <CodeBlock text={section6_5_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 </div>);
-let section6_6 = fadeInFactory(<div><h3>team_or_players.py</h3>
+let section6_6 = FadeInFactory(<div><h3>team_or_players.py</h3>
 <CodeBlock text={section6_6_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 </div>);
-let section6_7 = fadeInFactory(<div><h3>get_shots.py</h3>
+let section6_7 = FadeInFactory(<div><h3>get_shots.py</h3>
 <CodeBlock text={section6_7_text}  theme={dracula} showLineNumbers={false}></CodeBlock>
 
 </div>);
@@ -130,7 +130,7 @@ Select the desired ZoneDistance from the ZoneDistance option menu,
 do the same for selecting if you would like a team or a player. 
 After those two selection are made, pick a player or team that 
 you would like to have their data visualized. `
-let section7 = fadeInFactory(<div><h2>Usage</h2>
+let section7 = FadeInFactory(<div><h2>Usage</h2>
 
 <br></br>
 <CodeBlock text={section7_text} theme={dracula} showLineNumbers={false}></CodeBlock>

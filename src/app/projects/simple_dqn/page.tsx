@@ -8,7 +8,7 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 
 
 
-function fadeInFactory(element : React.JSX.Element){
+function FadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -26,7 +26,7 @@ function fadeInFactory(element : React.JSX.Element){
 
 export default function SimpleDQN() {
 
-  let introduction = fadeInFactory(<div>
+  let introduction = FadeInFactory(<div>
     <h2>1. INTRODUCTION</h2>
     <p>The composition of video games lends itself to being a common domain for research in machine learning. The
 environments with consistent constraints and rules allows for researchers to develop and tune agents to learn based on
@@ -57,7 +57,7 @@ experiences [3].</p>
   </div>)
 
 
-  let background = fadeInFactory(<div>
+  let background = FadeInFactory(<div>
     <h2>2.1. Environment.</h2>
     <p>The environment of the snake game lies within a 10x10 grid with each cell either being filled with a 0, 1, or 2. Each of
 the numbers represent a different state of the cells, 0 being that the cell is empty, 1 the snake is occupying the cell, 2 the
@@ -76,7 +76,7 @@ be placed into a random empty cell</p>
     </div>)
 
 
-  let related_work = fadeInFactory(<div>
+  let related_work = FadeInFactory(<div>
     <h2>3. RELATED WORK</h2>
     <p>There exist several works that pertain to the exact topic of solving the game of snake within a grid space using
 different forms of reinforcement learning models. All the works reviewed use an ε-greedy strategy as a way creating an
@@ -106,7 +106,7 @@ goes over a specified number of steps without eating a food cell [1].</p>
   Q(s\') := r\' + Q(s)
   `
 
-  let approach  = fadeInFactory(<div>
+  let approach  = FadeInFactory(<div>
 
     <p>The snake agent is initialized with a randomized weights according to a normal distribution. Then before any training
 begins with an ε of 1, 1000 episodes of the snake environment are run until completion. These are the initial episodes
@@ -149,7 +149,7 @@ current network is taken. The weighting is 9 parts the current network and 1 par
 
   </div>)
 
-  let experimental_results = fadeInFactory(<div>
+  let experimental_results = FadeInFactory(<div>
     <h2>5. EXPERIMENTAL RESULTS</h2>
     <p>Unfortunately this model was unable to sufficiently learn to survive or target food cells to increase in size. There
 are many reasons and possible points of improvement to be discussed in the following section. Figures 2 and 3, show
@@ -195,7 +195,7 @@ iterations in evaluation
 
   </div>)
 
-  let discussion = fadeInFactory(
+  let discussion = FadeInFactory(
     <div>
     <h2>6. DISCUSSION</h2>
     <p>The Simple DQN implementation with a simple replay buffer, played the game of snake at a worse rate than
@@ -215,7 +215,7 @@ and reward that are necessary in computing and developing a reinforcement-learni
 
   )
 
-  let reference = fadeInFactory(<div>
+  let reference = FadeInFactory(<div>
     <h1>REFERENCES</h1>
     <p>[1] A. J. Almalki and P. Wocjan, ”Exploration of Reinforcement Learning to Play Snake Game,” 2019 International Conference on Computational Science and Computational Intelligence (CSCI), 2019, pp. 377-381, doi:
     10.1109/CSCI49370.2019.00073.</p>
