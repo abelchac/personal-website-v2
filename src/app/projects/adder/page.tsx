@@ -8,7 +8,7 @@ import { CodeBlock, dracula } from 'react-code-blocks';
 
 
 
-function FadeInFactory(element : React.JSX.Element){
+function fadeInFactory(element : React.JSX.Element){
   const { ref, inView, entry } = useInView(
     {
       /* Optional config */
@@ -45,7 +45,8 @@ export default function AdderProject() {
   return (
     <div>
     {design_problem}
-       <object className="pdf"  type="application/pdf" data="adder/adder.pdf">
+       <object className="pdf" 
+            data="adder/adder.pdf">
     </object>
     </div>
     );

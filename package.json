@@ -11,6 +11,8 @@
   "dependencies": {
     "motion": "^10.18.0",
     "next": "14.2.7",
+    "pdf.js": "^0.1.0",
+    "pdfjs-dist": "^4.6.82",
     "react": "^18",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
