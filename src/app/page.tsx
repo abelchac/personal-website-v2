@@ -95,11 +95,11 @@ export default function Home() {
      <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
       <div ref={ref}>
         <p>
-          Hi, I'm Abel Chacko. I'm currently working as a Platform Application Engineer at Intel. My role entails enabling customers to use our FlexRAN software for their RAN solutions. 
+          Hi, I&apos;m Abel Chacko. I&apos;m currently working as a Platform Application Engineer at Intel. My role entails enabling customers to use our FlexRAN software for their RAN solutions. 
           Helping them solve issues from system enablement to setting up a full end-to-end 5G stack.
-          I graduated from the University of Pennsylvania in 2022 with my Master's in Robotics and Bachelor's in Computer Engineering. 
+          I graduated from the University of Pennsylvania in 2022 with my Master&apos;s in Robotics and Bachelor&apos;s in Computer Engineering. 
           
-          I'll finish this description later
+          I&apos;ll finish this description later
         </p>
           
       </div>    
