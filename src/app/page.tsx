@@ -31,22 +31,46 @@ export default function Home() {
     attributes: Big Data, Machine Learning, Data Visualization. 
     Description: Using feed forward neural networks and CSGO player statistics, a game result was predicted `;
 
-  let bicycle_gan_alt_text = `Implemented BicycleGAN which is an extension of CycleGAN that links basic GAN and VAE models in order to map an edge image into multiple RGB images
-  
-  
+  let bicycle_gan_alt_text = `
+  attributes: Machine Learning, Big Data, Research
+  Description:
+  Implemented BicycleGAN which is an extension of CycleGAN that links basic GAN and VAE models in order to map an edge image into multiple RGB images
   `
+  let kd_alt_text = `
+  attributes: Data Structures and Algorithims, Data Analytics, Image Processing :
+  Description: Using K-d trees, compressed the color space of an image while minimizing the variance between colors`
+  let nba_awards_alt_text = `
+  attributes: Data Structures and Algorithims, Web Scraping, Object Oriented
+  Description: Player awards are predicted using polynomial functions based on the current NBA stats`
+  let lyric_gen_alt_text = `
+  attributes:  Big Data, Machine Learning, API Usage
+  Description: Applied various machine learing models to the task of generating lyrics given a starting phrase`;
+  let nba_shot_chart_alt_text = `
+    attributes: Object Oriented, API Usage, Data Visualization
+  Description: Produces a visualization of player or team shot charts and compares the charts to league avgerage`;
+  let ram_design_alt_text = `
+    attributes: Circuit Design, Circuit Simulation, Circuit Optimization
+  Description: Using Electric and NgSpice, designed a 16 x 4 bit RAM array and tested read and write up 1GHZ`;
+  let music_streaming_alt_text = `
+    attributes: Networking, Object Oriented, Multithreading
+  Description: Music Streaming Protocol, MSP, is an application-level protocol for real-time control over the delivery of audio data, e.g. songs.`;
+  let snake_ai_alt_text = `
+    attributes: Data Structures and Algorithims,  Machine Learning, Q-Learning
+  Description: A naive approach to solving the game of snake using a Deep Q-Learning Model.`;
+  let adder_alt_text = `
+    attributes: Circuit Design, Circuit Simulation, Circuit Optimization
+  Description: Using Electric and NgSpice, designed and tested an 8-bit adder with several varation to the design  `
 
-
-  let cards = [ <ProjectCard key={0} project_svg_name="KdTreesCard.png" alt_text="" href="kd_trees"/>,
-    <ProjectCard key={1} project_svg_name="NbaAwardsCard.png" alt_text="" href="nba_awards_predictor"/>,
-    <ProjectCard key={2}  project_svg_name="BicycleGan.png" alt_text="" href="bicyclegan"/>,
-    <ProjectCard key={3} project_svg_name="LyricGenAI.png" alt_text="" href="lyric_gen"/>,
-    <ProjectCard key={4} project_svg_name="NbaShotChartCard.png" alt_text="" href="nba_shot_chart"/>,
-    <ProjectCard key={5} project_svg_name="RamCard.png" alt_text="" href="ram_design"/> ,
-    <ProjectCard key={6} project_svg_name="MusicStreamingCard.png" alt_text="" href="music_streaming"/>,
+  let cards = [ <ProjectCard key={0} project_svg_name="KdTreesCard.png" alt_text={kd_alt_text} href="kd_trees"/>,
+    <ProjectCard key={1} project_svg_name="NbaAwardsCard.png" alt_text={nba_awards_alt_text} href="nba_awards_predictor"/>,
+    <ProjectCard key={2}  project_svg_name="BicycleGan.png" alt_text={bicycle_gan_alt_text} href="bicyclegan"/>,
+    <ProjectCard key={3} project_svg_name="LyricGenAI.png" alt_text={lyric_gen_alt_text} href="lyric_gen"/>,
+    <ProjectCard key={4} project_svg_name="NbaShotChartCard.png" alt_text={nba_shot_chart_alt_text} href="nba_shot_chart"/>,
+    <ProjectCard key={5} project_svg_name="RamCard.png" alt_text={ram_design_alt_text} href="ram_design"/> ,
+    <ProjectCard key={6} project_svg_name="MusicStreamingCard.png" alt_text={music_streaming_alt_text} href="music_streaming"/>,
     <ProjectCard key={7} project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
-    <ProjectCard key={8} project_svg_name="SnakeAICard.png" alt_text="" href="simple_dqn" />,
-    <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text="" href="adder" />]
+    <ProjectCard key={8} project_svg_name="SnakeAICard.png" alt_text={snake_ai_alt_text} href="simple_dqn" />,
+    <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text={adder_alt_text} href="adder" />]
 
   
     const { ref, inView, entry } = useInView(
@@ -70,44 +94,22 @@ export default function Home() {
      
      <InView as="div" onChange={(inView, entry) => {entry.target.children[0].classList.add('show')}} className={`transition-opacity duration-1000 ${inView ? 'opacity-100 shown' : 'opacity-0'}`}>
       <div ref={ref}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tristique pretium. Aliquam malesuada laoreet sapien, eu feugiat ligula gravida in. Maecenas porta eu odio eget congue. Nulla turpis nisi, faucibus at vehicula et, sodales sit amet risus. Integer quis turpis porta, pellentesque neque id, tincidunt tellus. Etiam ligula erat, molestie ut laoreet id, hendrerit rhoncus justo. Aliquam dui felis, tristique at augue ac, vestibulum molestie nisi. Sed fermentum, erat quis molestie volutpat, ex sem ultricies magna, vel consequat enim lectus sed massa. Mauris eget justo feugiat dui volutpat vehicula a sit amet purus. Nullam tincidunt condimentum ligula, eget hendrerit nunc. Fusce sed lectus suscipit, dapibus velit convallis, rhoncus enim. Pellentesque vel metus id mi molestie laoreet. Sed sit amet ligula orci. Curabitur scelerisque ex nec felis lobortis hendrerit. Praesent vitae tincidunt metus. Pellentesque eu magna lacinia, cursus orci sed, convallis quam.
-
-        Fusce dictum ac ligula nec accumsan. Praesent non sapien vitae magna vestibulum tempus in vel metus. Nullam tincidunt venenatis felis, ut convallis risus lobortis id. Donec quam massa, sagittis nec tristique ac, tincidunt nec enim. Curabitur congue ultrices varius. Pellentesque pretium nunc non tellus tempor condimentum. Integer vel laoreet ante. Morbi tempor ut lorem ac iaculis. Vivamus ultricies tempor nisi, consectetur ullamcorper ex rutrum et. Curabitur rhoncus mattis odio non tincidunt.
-
-        Maecenas vel ante eu libero sodales ullamcorper nec nec ipsum. Vestibulum felis nulla, mattis eget aliquet non, suscipit non lectus. Maecenas egestas orci non leo ullamcorper volutpat. Donec lacus purus, hendrerit ut dignissim non, posuere id nisi. Quisque sagittis posuere orci quis ullamcorper. Integer turpis metus, bibendum et sagittis in, facilisis vel libero. Morbi ut nisl nibh. Suspendisse vel lacus lorem. Quisque vel leo eu augue porttitor convallis. Aliquam egestas ex at ullamcorper iaculis. Donec ut ante leo. Nam dignissim ante auctor mi suscipit, non auctor lorem volutpat. Nullam dolor nulla, malesuada scelerisque tempor sit amet, blandit nec lacus. Mauris aliquam dolor felis.
-
-        Mauris venenatis tincidunt tincidunt. Vestibulum non massa ut turpis lobortis volutpat. Suspendisse sodales dignissim velit, quis elementum ipsum feugiat tincidunt. Duis quam nunc, gravida ac nisi vel, lacinia consectetur tellus. Donec scelerisque ex nec lorem volutpat interdum. Cras ornare, diam eu rhoncus porta, ante urna tempus sapien, eget bibendum dolor tortor ac ex. Aliquam erat volutpat. Donec vitae dapibus massa. Ut a justo pellentesque, sagittis ex at, rhoncus lacus. Ut ac accumsan arcu. Curabitur aliquet euismod ipsum, ut ultricies mi efficitur posuere. Praesent fermentum tincidunt erat in cursus. Ut vestibulum lobortis consequat. Vestibulum dignissim nunc nec orci fringilla, et tempus ipsum consequat. Curabitur a tincidunt purus, eu euismod leo.
-
-        Vestibulum fermentum id dui ac interdum. Vivamus vel hendrerit sapien, nec maximus lorem. Nam pellentesque ullamcorper nunc. Aliquam aliquam tortor sed justo fermentum, a dignissim leo sollicitudin. Phasellus in nunc ultrices mi aliquet consectetur ac vitae mauris. Donec eu sollicitudin dui, et aliquam felis. Morbi semper at massa vel vestibulum. Nam sagittis pellentesque nunc ut dapibus. Nulla cursus, orci at mattis posuere, sem leo scelerisque mi, quis scelerisque mi diam eu eros.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tristique pretium. Aliquam malesuada laoreet sapien, eu feugiat ligula gravida in. Maecenas porta eu odio eget congue. Nulla turpis nisi, faucibus at vehicula et, sodales sit amet risus. Integer quis turpis porta, pellentesque neque id, tincidunt tellus. Etiam ligula erat, molestie ut laoreet id, hendrerit rhoncus justo. Aliquam dui felis, tristique at augue ac, vestibulum molestie nisi. Sed fermentum, erat quis molestie volutpat, ex sem ultricies magna, vel consequat enim lectus sed massa. Mauris eget justo feugiat dui volutpat vehicula a sit amet purus. Nullam tincidunt condimentum ligula, eget hendrerit nunc. Fusce sed lectus suscipit, dapibus velit convallis, rhoncus enim. Pellentesque vel metus id mi molestie laoreet. Sed sit amet ligula orci. Curabitur scelerisque ex nec felis lobortis hendrerit. Praesent vitae tincidunt metus. Pellentesque eu magna lacinia, cursus orci sed, convallis quam.
-
-        Fusce dictum ac ligula nec accumsan. Praesent non sapien vitae magna vestibulum tempus in vel metus. Nullam tincidunt venenatis felis, ut convallis risus lobortis id. Donec quam massa, sagittis nec tristique ac, tincidunt nec enim. Curabitur congue ultrices varius. Pellentesque pretium nunc non tellus tempor condimentum. Integer vel laoreet ante. Morbi tempor ut lorem ac iaculis. Vivamus ultricies tempor nisi, consectetur ullamcorper ex rutrum et. Curabitur rhoncus mattis odio non tincidunt.
-
-        Maecenas vel ante eu libero sodales ullamcorper nec nec ipsum. Vestibulum felis nulla, mattis eget aliquet non, suscipit non lectus. Maecenas egestas orci non leo ullamcorper volutpat. Donec lacus purus, hendrerit ut dignissim non, posuere id nisi. Quisque sagittis posuere orci quis ullamcorper. Integer turpis metus, bibendum et sagittis in, facilisis vel libero. Morbi ut nisl nibh. Suspendisse vel lacus lorem. Quisque vel leo eu augue porttitor convallis. Aliquam egestas ex at ullamcorper iaculis. Donec ut ante leo. Nam dignissim ante auctor mi suscipit, non auctor lorem volutpat. Nullam dolor nulla, malesuada scelerisque tempor sit amet, blandit nec lacus. Mauris aliquam dolor felis.
-
-        Mauris venenatis tincidunt tincidunt. Vestibulum non massa ut turpis lobortis volutpat. Suspendisse sodales dignissim velit, quis elementum ipsum feugiat tincidunt. Duis quam nunc, gravida ac nisi vel, lacinia consectetur tellus. Donec scelerisque ex nec lorem volutpat interdum. Cras ornare, diam eu rhoncus porta, ante urna tempus sapien, eget bibendum dolor tortor ac ex. Aliquam erat volutpat. Donec vitae dapibus massa. Ut a justo pellentesque, sagittis ex at, rhoncus lacus. Ut ac accumsan arcu. Curabitur aliquet euismod ipsum, ut ultricies mi efficitur posuere. Praesent fermentum tincidunt erat in cursus. Ut vestibulum lobortis consequat. Vestibulum dignissim nunc nec orci fringilla, et tempus ipsum consequat. Curabitur a tincidunt purus, eu euismod leo.
-
-        Vestibulum fermentum id dui ac interdum. Vivamus vel hendrerit sapien, nec maximus lorem. Nam pellentesque ullamcorper nunc. Aliquam aliquam tortor sed justo fermentum, a dignissim leo sollicitudin. Phasellus in nunc ultrices mi aliquet consectetur ac vitae mauris. Donec eu sollicitudin dui, et aliquam felis. Morbi semper at massa vel vestibulum. Nam sagittis pellentesque nunc ut dapibus. Nulla cursus, orci at mattis posuere, sem leo scelerisque mi, quis scelerisque mi diam eu eros.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tristique pretium. Aliquam malesuada laoreet sapien, eu feugiat ligula gravida in. Maecenas porta eu odio eget congue. Nulla turpis nisi, faucibus at vehicula et, sodales sit amet risus. Integer quis turpis porta, pellentesque neque id, tincidunt tellus. Etiam ligula erat, molestie ut laoreet id, hendrerit rhoncus justo. Aliquam dui felis, tristique at augue ac, vestibulum molestie nisi. Sed fermentum, erat quis molestie volutpat, ex sem ultricies magna, vel consequat enim lectus sed massa. Mauris eget justo feugiat dui volutpat vehicula a sit amet purus. Nullam tincidunt condimentum ligula, eget hendrerit nunc. Fusce sed lectus suscipit, dapibus velit convallis, rhoncus enim. Pellentesque vel metus id mi molestie laoreet. Sed sit amet ligula orci. Curabitur scelerisque ex nec felis lobortis hendrerit. Praesent vitae tincidunt metus. Pellentesque eu magna lacinia, cursus orci sed, convallis quam.
-
-        Fusce dictum ac ligula nec accumsan. Praesent non sapien vitae magna vestibulum tempus in vel metus. Nullam tincidunt venenatis felis, ut convallis risus lobortis id. Donec quam massa, sagittis nec tristique ac, tincidunt nec enim. Curabitur congue ultrices varius. Pellentesque pretium nunc non tellus tempor condimentum. Integer vel laoreet ante. Morbi tempor ut lorem ac iaculis. Vivamus ultricies tempor nisi, consectetur ullamcorper ex rutrum et. Curabitur rhoncus mattis odio non tincidunt.
-
-        Maecenas vel ante eu libero sodales ullamcorper nec nec ipsum. Vestibulum felis nulla, mattis eget aliquet non, suscipit non lectus. Maecenas egestas orci non leo ullamcorper volutpat. Donec lacus purus, hendrerit ut dignissim non, posuere id nisi. Quisque sagittis posuere orci quis ullamcorper. Integer turpis metus, bibendum et sagittis in, facilisis vel libero. Morbi ut nisl nibh. Suspendisse vel lacus lorem. Quisque vel leo eu augue porttitor convallis. Aliquam egestas ex at ullamcorper iaculis. Donec ut ante leo. Nam dignissim ante auctor mi suscipit, non auctor lorem volutpat. Nullam dolor nulla, malesuada scelerisque tempor sit amet, blandit nec lacus. Mauris aliquam dolor felis.
-
-        Mauris venenatis tincidunt tincidunt. Vestibulum non massa ut turpis lobortis volutpat. Suspendisse sodales dignissim velit, quis elementum ipsum feugiat tincidunt. Duis quam nunc, gravida ac nisi vel, lacinia consectetur tellus. Donec scelerisque ex nec lorem volutpat interdum. Cras ornare, diam eu rhoncus porta, ante urna tempus sapien, eget bibendum dolor tortor ac ex. Aliquam erat volutpat. Donec vitae dapibus massa. Ut a justo pellentesque, sagittis ex at, rhoncus lacus. Ut ac accumsan arcu. Curabitur aliquet euismod ipsum, ut ultricies mi efficitur posuere. Praesent fermentum tincidunt erat in cursus. Ut vestibulum lobortis consequat. Vestibulum dignissim nunc nec orci fringilla, et tempus ipsum consequat. Curabitur a tincidunt purus, eu euismod leo.
-
-        Vestibulum fermentum id dui ac interdum. Vivamus vel hendrerit sapien, nec maximus lorem. Nam pellentesque ullamcorper nunc. Aliquam aliquam tortor sed justo fermentum, a dignissim leo sollicitudin. Phasellus in nunc ultrices mi aliquet consectetur ac vitae mauris. Donec eu sollicitudin dui, et aliquam felis. Morbi semper at massa vel vestibulum. Nam sagittis pellentesque nunc ut dapibus. Nulla cursus, orci at mattis posuere, sem leo scelerisque mi, quis scelerisque mi diam eu eros.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere tristique pretium. Aliquam malesuada laoreet sapien, eu feugiat ligula gravida in. Maecenas porta eu odio eget congue. Nulla turpis nisi, faucibus at vehicula et, sodales sit amet risus. Integer quis turpis porta, pellentesque neque id, tincidunt tellus. Etiam ligula erat, molestie ut laoreet id, hendrerit rhoncus justo. Aliquam dui felis, tristique at augue ac, vestibulum molestie nisi. Sed fermentum, erat quis molestie volutpat, ex sem ultricies magna, vel consequat enim lectus sed massa. Mauris eget justo feugiat dui volutpat vehicula a sit amet purus. Nullam tincidunt condimentum ligula, eget hendrerit nunc. Fusce sed lectus suscipit, dapibus velit convallis, rhoncus enim. Pellentesque vel metus id mi molestie laoreet. Sed sit amet ligula orci. Curabitur scelerisque ex nec felis lobortis hendrerit. Praesent vitae tincidunt metus. Pellentesque eu magna lacinia, cursus orci sed, convallis quam.
-
-        Fusce dictum ac ligula nec accumsan. Praesent non sapien vitae magna vestibulum tempus in vel metus. Nullam tincidunt venenatis felis, ut convallis risus lobortis id. Donec quam massa, sagittis nec tristique ac, tincidunt nec enim. Curabitur congue ultrices varius. Pellentesque pretium nunc non tellus tempor condimentum. Integer vel laoreet ante. Morbi tempor ut lorem ac iaculis. Vivamus ultricies tempor nisi, consectetur ullamcorper ex rutrum et. Curabitur rhoncus mattis odio non tincidunt.
-
-        Maecenas vel ante eu libero sodales ullamcorper nec nec ipsum. Vestibulum felis nulla, mattis eget aliquet non, suscipit non lectus. Maecenas egestas orci non leo ullamcorper volutpat. Donec lacus purus, hendrerit ut dignissim non, posuere id nisi. Quisque sagittis posuere orci quis ullamcorper. Integer turpis metus, bibendum et sagittis in, facilisis vel libero. Morbi ut nisl nibh. Suspendisse vel lacus lorem. Quisque vel leo eu augue porttitor convallis. Aliquam egestas ex at ullamcorper iaculis. Donec ut ante leo. Nam dignissim ante auctor mi suscipit, non auctor lorem volutpat. Nullam dolor nulla, malesuada scelerisque tempor sit amet, blandit nec lacus. Mauris aliquam dolor felis.
-
-        Mauris venenatis tincidunt tincidunt. Vestibulum non massa ut turpis lobortis volutpat. Suspendisse sodales dignissim velit, quis elementum ipsum feugiat tincidunt. Duis quam nunc, gravida ac nisi vel, lacinia consectetur tellus. Donec scelerisque ex nec lorem volutpat interdum. Cras ornare, diam eu rhoncus porta, ante urna tempus sapien, eget bibendum dolor tortor ac ex. Aliquam erat volutpat. Donec vitae dapibus massa. Ut a justo pellentesque, sagittis ex at, rhoncus lacus. Ut ac accumsan arcu. Curabitur aliquet euismod ipsum, ut ultricies mi efficitur posuere. Praesent fermentum tincidunt erat in cursus. Ut vestibulum lobortis consequat. Vestibulum dignissim nunc nec orci fringilla, et tempus ipsum consequat. Curabitur a tincidunt purus, eu euismod leo.
-
-        Vestibulum fermentum id dui ac interdum. Vivamus vel hendrerit sapien, nec maximus lorem. Nam pellentesque ullamcorper nunc. Aliquam aliquam tortor sed justo fermentum, a dignissim leo sollicitudin. Phasellus in nunc ultrices mi aliquet consectetur ac vitae mauris. Donec eu sollicitudin dui, et aliquam felis. Morbi semper at massa vel vestibulum. Nam sagittis pellentesque nunc ut dapibus. Nulla cursus, orci at mattis posuere, sem leo scelerisque mi, quis scelerisque mi diam eu eros.
-        </div>    
-        </InView>
+        <p>
+          Hi, I'm Abel Chacko. I'm currently working as a Platform Application Engineer at Intel. My role entails enabling customers to use our FlexRAN software for their RAN solutions. 
+          Helping them solve issues from system enablement to setting up a full end-to-end 5G stack.
+          I graduated from the University of Pennsylvania in 2022 with my Master's in Robotics and Bachelor's in Computer Engineering. 
+          
+          I'll finish this description later
+        </p>
+          
+      </div>    
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      </InView>
     <section>
     <br></br>
     {project_title}
