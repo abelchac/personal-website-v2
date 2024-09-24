@@ -27,9 +27,13 @@ function FadeInFactory(element : React.JSX.Element){
 export default function MusicStreamingProject() {
   let project_description = <div>
     <h1>Streaming Music Service</h1>
-    <p> In this project, we deisgned and implemtned a protocol of our own for a music streaming service.
-      We had to have a server with music files respodning to a client request for music.
+    
+    <Link href="https://github.com/abelchac/music-streaming-protocol"> <h2>Project Link: https://github.com/abelchac/music-streaming-protocol</h2></Link>
+    
+    <p> In this project, we designed and implemented a protocol of our own for a music streaming service.
+      We had to have a server with music files responding to a client request for music.
     </p>
+    <video controls src="music_streaming/msp.mp4"></video>
     <h2>Requirements</h2>
     <section>
       <ul>
@@ -56,7 +60,9 @@ export default function MusicStreamingProject() {
   return (
       <div>
         {project_description}
+        
         <section className="">
+       
        <object className="pdf" 
             data="music_streaming/rfc.html">
     </object>
