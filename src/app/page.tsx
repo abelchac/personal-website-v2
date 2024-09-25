@@ -70,7 +70,8 @@ export default function Home() {
     <ProjectCard key={6} project_svg_name="MusicStreamingCard.png" alt_text={music_streaming_alt_text} href="music_streaming"/>,
     <ProjectCard key={7} project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
     <ProjectCard key={8} project_svg_name="SnakeAICard.png" alt_text={snake_ai_alt_text} href="simple_dqn" />,
-    <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text={adder_alt_text} href="adder" />]
+    <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text={adder_alt_text} href="adder" />,
+    <Link key={10} href={"projects/5gPresentation"}>5G Presentation</Link>]
 
   
     const { ref, inView, entry } = useInView(
@@ -124,7 +125,7 @@ export default function Home() {
     {cards[7]}
     {cards[8]}
     {cards[9]}
-
+    {cards[10]}
     </div>  
     </section>   
   </section> 
