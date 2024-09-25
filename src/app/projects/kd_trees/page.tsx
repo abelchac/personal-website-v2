@@ -27,7 +27,7 @@ function FadeInFactory(element : React.JSX.Element){
 export default function KdTreesProject() {
   let title = (<div className=""><h1>KD-Trees Image Compression</h1>
     <Link href="https://github.com/abelchac/kdTreesColorCompression"> <h2>Project Link: https://github.com/abelchac/kdTreesColorCompression</h2></Link>
-    <p>While working on another project, I got stuck trying to find a faster way to compress the color space of my images. That's when I ran into this blog post <Link href="https://www.crisluengo.net/archives/932/">https://www.crisluengo.net/archives/932/</Link>
+    <p>While working on another project, I got stuck trying to find a faster way to compress the color space of my images. That&apos;s when I ran into this blog post <Link href="https://www.crisluengo.net/archives/932/">https://www.crisluengo.net/archives/932/</Link>
     by Chris Luengo. The concept is to use KD-Trees and <Link href="https://en.wikipedia.org/wiki/Otsu%27s_method">Otsu&apos;s Algorithm Iteratively</Link> to maximize the variance that we can achieve using a few colors as possible.</p>
     </div>);
 
