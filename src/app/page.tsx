@@ -37,17 +37,17 @@ export default function Home() {
   Implemented BicycleGAN which is an extension of CycleGAN that links basic GAN and VAE models in order to map an edge image into multiple RGB images
   `
   let kd_alt_text = `
-  attributes: Data Structures and Algorithims, Data Analytics, Image Processing :
+  attributes: Data Structures and Algorithms, Data Analytics, Image Processing :
   Description: Using K-d trees, compressed the color space of an image while minimizing the variance between colors`
   let nba_awards_alt_text = `
-  attributes: Data Structures and Algorithims, Web Scraping, Object Oriented
+  attributes: Data Structures and Algorithms, Web Scraping, Object Oriented
   Description: Player awards are predicted using polynomial functions based on the current NBA stats`
   let lyric_gen_alt_text = `
   attributes:  Big Data, Machine Learning, API Usage
-  Description: Applied various machine learing models to the task of generating lyrics given a starting phrase`;
+  Description: Applied various machine learning models to the task of generating lyrics given a starting phrase`;
   let nba_shot_chart_alt_text = `
     attributes: Object Oriented, API Usage, Data Visualization
-  Description: Produces a visualization of player or team shot charts and compares the charts to league avgerage`;
+  Description: Produces a visualization of player or team shot charts and compares the charts to league average`;
   let ram_design_alt_text = `
     attributes: Circuit Design, Circuit Simulation, Circuit Optimization
   Description: Using Electric and NgSpice, designed a 16 x 4 bit RAM array and tested read and write up 1GHZ`;
@@ -55,11 +55,11 @@ export default function Home() {
     attributes: Networking, Object Oriented, Multithreading
   Description: Music Streaming Protocol, MSP, is an application-level protocol for real-time control over the delivery of audio data, e.g. songs.`;
   let snake_ai_alt_text = `
-    attributes: Data Structures and Algorithims,  Machine Learning, Q-Learning
+    attributes: Data Structures and Algorithms,  Machine Learning, Q-Learning
   Description: A naive approach to solving the game of snake using a Deep Q-Learning Model.`;
   let adder_alt_text = `
     attributes: Circuit Design, Circuit Simulation, Circuit Optimization
-  Description: Using Electric and NgSpice, designed and tested an 8-bit adder with several varation to the design  `
+  Description: Using Electric and NgSpice, designed and tested an 8-bit adder with several variation to the design  `
 
   let cards = [ <ProjectCard key={0} project_svg_name="KdTreesCard.png" alt_text={kd_alt_text} href="kd_trees"/>,
     <ProjectCard key={1} project_svg_name="NbaAwardsCard.png" alt_text={nba_awards_alt_text} href="nba_awards_predictor"/>,
