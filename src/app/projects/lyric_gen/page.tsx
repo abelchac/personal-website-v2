@@ -32,9 +32,12 @@ export default function LyricGenProject() {
   &emsp; In this project we apply various machine learning models to the task of generating lyrics given some starting phrase(s). In training the model with a variety of existing song data, we hope to provide a complement to songwriters in order to speed up or provide general inspiration for song production. Our primary contribution involves extracting data from Spotify’s top 50 artists’ songs by cross searching these titles and artists on the Genius lyric database. This trains the model on specifically more relevant and popular song lyrics as opposed to previous works in the area that scrape large quantities of data from Genius without filtering. We are also contributing through the application of several different models(character level, word level LSTMs, and GRUs each with and without audio features) to the input data to compare the strengths and weaknesses of each model. As of now, the LSTM model without audio features achieves the greatest lyric similarity to the training data in terms of lyric structure and form. 
 
   </p>
+  
   </>
 
   let introduction = FadeInFactory(<>
+  <img src="lyric_gen/arch.png"></img>
+  <br/>
   <h2>Introduction</h2>
   <p>&emsp;Automated lyric generation for songwriting has only recently become a more 
     researched field due to the perceived difficulty in emulating human creativity. With the 
