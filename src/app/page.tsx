@@ -99,8 +99,8 @@ export default function Home() {
           Hi, I&apos;m Abel Chacko. I&apos;m currently working as a Platform Application Engineer at Intel. My role entails enabling customers to use our FlexRAN software for their RAN solutions. 
           Helping them solve issues from system enablement to setting up a full end-to-end 5G stack.
           I graduated from the University of Pennsylvania in 2022 with my Master&apos;s in Robotics and Bachelor&apos;s in Computer Engineering. 
+          This website is a catalog to some of my projects. Hopefully you enjoy some of my work. If you do, don&apos;t hesitate to reach out at <Link href={"mailto:abelchacko0@gmail.com"}>abelchacko0@gmail.com</Link>
           
-          I&apos;ll finish this description later
         </p>
           
       </div>    
