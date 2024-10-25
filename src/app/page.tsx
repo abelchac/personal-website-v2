@@ -71,8 +71,8 @@ export default function Home() {
     <ProjectCard key={7} project_svg_name="CSGOCARD.png" alt_text={csgo_card_alt_text} href="csgo_predictor"/>,
     <ProjectCard key={8} project_svg_name="SnakeAICard.png" alt_text={snake_ai_alt_text} href="simple_dqn" />,
     <ProjectCard key={9} project_svg_name="AdderCard.png" alt_text={adder_alt_text} href="adder" />,
-    <ProjectCard key={10} project_svg_name="FiveGCard.png" alt_text="" href={"projects/5gPresentation"}/>]
-
+    <ProjectCard key={10} project_svg_name="FiveGCard.png" alt_text="" href={"5gPresentation"}/>]
+    //
   
     const { ref, inView, entry } = useInView(
       {
@@ -97,7 +97,7 @@ export default function Home() {
       <div ref={ref}>
         <p>
           Hi, I&apos;m Abel Chacko. I&apos;m currently working as a Platform Application Engineer at Intel. My role entails enabling customers to use our FlexRAN software for their RAN solutions. 
-          Helping them solve issues from system enablement to setting up a full end-to-end 5G stack.
+          Helping them solve issues from system enablement to establishing a full end-to-end 5G setups.
           I graduated from the University of Pennsylvania in 2022 with my Master&apos;s in Robotics and Bachelor&apos;s in Computer Engineering. 
           This website is a catalog to some of my projects. Hopefully you enjoy some of my work. If you do, don&apos;t hesitate to reach out at <Link href={"mailto:abelchacko0@gmail.com"}>abelchacko0@gmail.com</Link>
           
