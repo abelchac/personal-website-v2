@@ -92,7 +92,7 @@ iteration the DQN stores experiences that a created with the output action of th
 reward and next state in a tuple. One of the approaches has the Q-value for the current state and action be a cumulative value based a recursive formula on the previous states and actions with a discount factor at each recursive layer [2].</p>
 <br></br>
 <p>The other approach was to have several components building up to the reward. The components were the distance
-reward, a training gap, and timeout strategy. The distance reward is increases the reward if the action moves toward the
+reward, a training gap, and timeout strategy. The distance reward increases the reward if the action moves toward the
 target and decrease if it shifts away; the training gap will temporarily remove experiences from learning if they are not
 suitable, such as right after an agent is done eating a food; the timeout strategy will give a negative reward if the agent
 goes over a specified number of steps without eating a food cell [1].</p>
