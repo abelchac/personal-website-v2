@@ -31,12 +31,12 @@ export default function SimpleDQN() {
     <p>The composition of video games lends itself to being a common domain for research in machine learning. The
 environments with consistent constraints and rules allows for researchers to develop and tune agents to learn based on
 the gameplay in a reasonable fashion. Often for game developers the goal in these games was to develop agents which
-simulate intelligence learning from past experience within the game. The idea of finding the optimal strategy purely
+simulate intelligence, learning from past experience within the game. The idea of finding the optimal strategy purely
 with a dynamic programming approach may work in a small domain, but once the structure becomes more complex
 other unfixed strategies must be applied [1]. </p>
 <br></br>
 
-<p>Though refinement learning has been applied to other games and supposed human-level performance. This was
+<p>Though reinforcement learning has been applied to other games and supposed human-level performance. This was
 applied to the game of backgammon and led to the model of TD-gammon. With the breakthrough of DeepMind to
 combine reinforcement learning and deep learning coming up with the model of deep Q-Learning network (DQN)
 models, the foundation of a generalizable model began to take root [2].</p>
